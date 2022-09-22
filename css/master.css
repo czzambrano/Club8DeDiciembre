@@ -1,0 +1,303 @@
+/*Aplicando CSS de forma Externa*/
+/*----------------------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+/*-----------------------------------------*/
+
+ul{
+    color: tomato;
+    list-style-type: none;
+    
+}
+/*.fondo{
+    background-image: url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 650px;
+}*/
+
+/*Selector Clase*/
+.titulo{
+    color: white;
+    background-color: tomato;
+    text-align: center;
+}
+.subtitulo{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;  /* 1rem = 16px   2rem  = 2 * 16px*/
+    padding: 0px;
+    margin-top:60px; 
+    margin-left: 2%; 
+    
+}
+.subtitulos{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;   /*1rem = 16px   2rem  = 2 * 16px*/
+    padding-top: 0%;
+    padding:0px;
+    margin-top: 40px; 
+    margin-left: 70px;
+}
+.mapa{
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.80) ;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.principal{
+    color: rgb(54, 226, 7);
+    background-color: rgba(194, 240, 9, 0.0);
+    text-align: center;
+    font-size: 1rem; /*1rem = 16px 3rem = 3 * 16px  rem es una unidad de medida relativa*/
+    font-family: 'Bebas Neue', cursive;
+    /*----------------------------------------------*/
+    position:absolute;
+    width: 100%;
+    top: 300px;
+    padding: 10px;
+
+    /*----------------------------------------------*/
+}
+.parrafo{
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.64);
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(172, 112, 246);
+    padding:10px;
+    text-align: justify;
+    margin-top: 0px;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+a{
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    text-decoration: none;
+}
+a:hover{
+    color: tomato;
+    text-decoration: underline;
+}
+
+.boton{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+.boton:hover{
+    background-color: white;
+    color: green;
+    border: green 1px solid;
+}
+/*==== Desde aquí inicio la disposicón del CSS valiendonos de Flex-box ====*/
+.encabezado{
+display: flex;
+padding-top: 1%;
+}
+.logo{
+    width: 95%;
+    padding-left: 5%;
+    padding-top: 1%;
+    
+}
+.menu{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50) ;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5%;
+    
+    
+    
+}
+.opciones{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    
+    
+    
+}
+.redes{
+    width: 10%;
+    
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2%;
+    margin-right: 1%;
+
+}
+.producto{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.64);
+    width: 14%;
+    padding: 10px;
+}
+.logo1{
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.64);
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 5%;   
+}
+/*de aqui en adelante los carrouseles*/
+.slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+   margin-left: 10%;
+    margin-right: 10%;
+}
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc( 630px + 5em);
+}
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+}
+.slide-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+.slide-item img {
+   display: block;
+    height:650PX;
+    max-width: 100%;
+    
+}
+.slide-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+.slide-control.prev {
+    left: 2%;
+}
+.slide-control.next {
+    right: 2%;
+}
+.slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+/*PARA EL PRIMER CORROUSEL*/
+#slide-1-1:checked ~ .control-1-1,
+#slide-2-1:checked ~ .control-2-1,
+#slide-3-1:checked ~ .control-3-1,
+#slide-4-1:checked ~ .control-4-1,
+#slide-5-1:checked ~ .control-5-1,
+#slide-6-1:checked ~ .control-6-1 {
+    display: block;
+}
+/*PARA EL SEGUNDO CORROUSEL*/
+#slide-1-2:checked ~ .control-1-2,
+#slide-2-2:checked ~ .control-2-2,
+#slide-3-2:checked ~ .control-3-2,
+#slide-4-2:checked ~ .control-4-2,
+#slide-5-2:checked ~ .control-5-2,
+#slide-6-2:checked ~ .control-6-2 {
+    display: block;
+}
+.slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+.slide-circulo:hover {
+    color: #aaaaaa;
+}
+/*CONTROL PARA EL PRIMER CARROUSEL*/
+#slide-1-1:checked ~ .control-1-1 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2-1:checked ~ .control-2-1 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3-1:checked ~ .control-3-1 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo 
+#slide-4-1:checked ~ .control-4-1 ~ .slide-indicador 
+     li:nth-child(4) .slide-circulo,
+#slide-5-1:checked ~ .control-5-1 ~ .slide-indicador 
+      li:nth-child(5) .slide-circulo,
+#slide-6-1:checked ~ .control-6-1 ~ .slide-indicador 
+      li:nth-child(6) .slide-circulo{
+    color: #428bca;
+}
+/*CONTROL PARA EL SEGUNDO CARROUSEL*/
+#slide-1-2:checked ~ .control-1-2 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2-2:checked ~ .control-2-2 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3-2:checked ~ .control-3-2 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo 
+#slide-4-2:checked ~ .control-4-2 ~ .slide-indicador 
+     li:nth-child(4) .slide-circulo,
+#slide-5-2:checked ~ .control-5-2 ~ .slide-indicador 
+      li:nth-child(5) .slide-circulo,
+#slide-6-2:checked ~ .control-6-1 ~ .slide-indicador 
+      li:nth-child(6) .slide-circulo{
+    color: #428bca;
+}
+#titulo {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+         -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
