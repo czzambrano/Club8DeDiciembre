@@ -157,17 +157,19 @@ padding-top: 1%;
 }
 /*de aqui en adelante los carrouseles*/
 .slide {
+    width: 88%;
     position: relative;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 26px;
+    margin-top: 25px;
+   margin-left: 20%;
    margin-left: 10%;
-    margin-right: 10%;
+    
 }
 .slide-inner {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: calc( 630px + 5em);
+    height: calc( 370px + 5em);
 }
 .slide-open:checked + .slide-item {
     position: static;
