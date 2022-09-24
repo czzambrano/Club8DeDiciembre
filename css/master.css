@@ -169,7 +169,8 @@ padding-top: 1%;
     position: relative;
     overflow: hidden;
     width: 80%;
-    height: calc( 650px + 1em);
+    height: calc( 650px + -5rem);
+    
     margin-left: 10%;
    
 }
