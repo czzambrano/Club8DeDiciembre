@@ -57,7 +57,7 @@ ul{
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
     /*font-family: fantasy 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
-    /*background-color: rgb(135, 136, 138);*/
+    background-color: rgba(171, 118, 251, 0.732);
     padding:10px;
     text-align: justify;
     margin-top: -15px;
@@ -119,7 +119,6 @@ justify-content: center;*/
     box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.80); 
     color: rgb(0, 0, 255);
 }
-
 .logo1{
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.64);
     width: 95%;
