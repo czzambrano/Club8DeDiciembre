@@ -43,21 +43,6 @@ ul{
     margin-left: 2%;
     margin-right: 2%;
 }
-
-.principal{
-    /*color: rgb(54, 226, 7);
-    background-color: rgba(194, 240, 9, 0.0);
-    text-align: center;
-    font-size: 1rem; /*1rem = 16px 3rem = 3 * 16px  rem es una unidad de medida relativa
-    font-family: 'Bebas Neue', cursive;*/
-    /*----------------------------------------------*/
-    /*position:absolute;
-    width: 100%;
-    top: 300px;
-    padding: 10px;*/
-
-    /*----------------------------------------------*/
-}
 .parrafo{
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.64);
     font-size: 20px;
@@ -99,12 +84,15 @@ a:hover{
 }
 /*==== Desde aquí inicio la disposicón del CSS valiendonos de Flex-box ====*/
 .encabezado{
-    display: grid;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50);
+    width: 90%;
+    margin-left: 5%;
+    /*display: grid;
     grid-template-columns: 200px 200px 200px;
     /*grid-template-rows: 100px 100px;*/
-/*display: flex*/
+/*display: flex
 padding-top: 1%;
-justify-content: center;
+justify-content: center;*/
 }
 
 .logo{
