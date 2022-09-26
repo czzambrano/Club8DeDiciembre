@@ -84,7 +84,7 @@ a:hover{
 }
 /*==== Desde aquí inicio la disposicón del CSS valiendonos de Flex-box ====*/
 .encabezado{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50);
+    /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50);
     width: 90%;
     margin-left: 5%;
     /*display: grid;
