@@ -283,3 +283,24 @@ main {
     grid-template-columns: 200px 200px 200px 200px 200px 200px;
     grid-template-rows: 150px 150px;
   }
+  .carousel-control-prev{
+    background: rgba(236, 246, 102, 0.5);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    /*display: none;*/
+    font-size:20px;
+    height: 40px;
+    line-height: 70px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+ 
