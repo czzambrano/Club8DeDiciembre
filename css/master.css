@@ -13,11 +13,6 @@ ul{
 
 
 /*Selector Clase*/
-.titulo{
-    color: white;
-    background-color: tomato;
-    text-align: center;
-}
 
 .subtitulo{
     /*box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.80);*/
@@ -26,7 +21,8 @@ ul{
     font-size: 2rem;  /* 1rem = 16px   2rem  = 2 * 16px*/
     padding: 0px;
     margin-top:60px; 
-    margin-left:5%; 
+    margin-left:5%;
+     
     
 }
 .subtitulos{
@@ -49,7 +45,7 @@ ul{
     margin-right: 2%;
     
 }
-.parrafo{
+P {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.64);
     color:rgb(0, 0, 255);
     font-size: 20px;
@@ -60,7 +56,7 @@ ul{
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
     /*font-family: fantasy 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
-    background-color: rgba(216, 214, 219, 0.732);
+    /*background-color: rgba(216, 214, 219, 0.732);*/
     padding:10px;
     text-align: justify;
     margin-top: -15px;
@@ -93,7 +89,7 @@ a:hover{
     color: green;
     border: green 1px solid;
 }
-/*==== Desde aquí inicio la disposicón del CSS valiendonos de Flex-box ====*/
+/*==== Desde aquí inicio la disposicón del CSS valiendonos de Flex-box ====================================================*/
 .encabezado{
     width: 95%;
     margin-left: 2%;
@@ -132,7 +128,7 @@ justify-content: center;*/
     margin-right: 5%;   
 }
 
-/*de aqui en adelante los carrouseles*/
+/*=====================================================CARROUSELES 1,2 Y 3=================================================*/
 
 .slide{
     width: 88%;
@@ -194,7 +190,7 @@ justify-content: center;*/
     background: rgba(0, 0, 0, 0.8);
     color: #aaaaaa;
 }
-/*PARA EL PRIMER CORROUSEL*/
+/*PARA EL PRIMER CORROUSEL--------------------------------------------------------------------------------------------------*/
 #slide-1-1:checked ~ .control-1-1,
 #slide-2-1:checked ~ .control-2-1,
 #slide-3-1:checked ~ .control-3-1,
@@ -203,7 +199,7 @@ justify-content: center;*/
 #slide-6-1:checked ~ .control-6-1 {
     display: block;
 }
-/*PARA EL SEGUNDO CORROUSEL*/
+/*PARA EL SEGUNDO CORROUSEL--------------------------------------------------------------------------------------------------*/
 #slide-1-2:checked ~ .control-1-2,
 #slide-2-2:checked ~ .control-2-2,
 #slide-3-2:checked ~ .control-3-2,
@@ -212,7 +208,7 @@ justify-content: center;*/
 #slide-6-2:checked ~ .control-6-2 {
     display: block;
 }
-/*PARA EL TERCER  CORROUSEL*/
+/*PARA EL TERCER  CORROUSEL-----------------------------------------------------------------------------------------------*/
 #slide-1-3:checked ~ .control-1-3,
 #slide-2-3:checked ~ .control-2-3,
 #slide-3-3:checked ~ .control-3-3,
@@ -245,7 +241,7 @@ justify-content: center;*/
 .slide-circulo:hover {
     color: #aaaaaa;
 }
-/*CONTROL PARA EL PRIMER CARROUSEL*/
+/*CONTROL PARA EL PRIMER CARROUSEL-----------------------------------------------------------------------------------------*/
 #slide-1-1:checked ~ .control-1-1 ~ .slide-indicador 
      li:nth-child(1) .slide-circulo,
 #slide-2-1:checked ~ .control-2-1 ~ .slide-indicador 
@@ -260,7 +256,7 @@ justify-content: center;*/
       li:nth-child(6) .slide-circulo{
     color: #428bca;
 }
-/*CONTROL PARA EL SEGUNDO CARROUSEL*/
+/*CONTROL PARA EL SEGUNDO CARROUSEL------------------------------------------------------------------------------------------*/
 #slide-1-2:checked ~ .control-1-2 ~ .slide-indicador 
      li:nth-child(1) .slide-circulo,
 #slide-2-2:checked ~ .control-2-2 ~ .slide-indicador 
@@ -275,7 +271,7 @@ justify-content: center;*/
       li:nth-child(6) .slide-circulo{
     color: #428bca;
 }
-/*CONTROL PARA EL TERCER CARROUSEL*/
+/*CONTROL PARA EL TERCER CARROUSEL------------------------------------------------------------------------------------------*/
 #slide-1-3:checked ~ .control-1-3 ~ .slide-indicador 
      li:nth-child(1) .slide-circulo,
 #slide-2-3:checked ~ .control-2-3 ~ .slide-indicador 
@@ -309,86 +305,8195 @@ main {
     grid-template-columns: 200px 200px 200px 200px 200px 200px;
     grid-template-rows: 150px 150px;
   }
-  
-/*CARROUSEL 3D*/
-*{
+  /*---********************************************************************************************************************
+  **************************************************************************************************************************
+  ***********************************************************************************************************************---*/
+/*====================================================================NUEVO CAROUSEL1======================================
+============================================================================================================================
+===========================================================================================================================*/
+* {
+  box-sizing: border-box;
+}
+h1,
+p {
+  text-align: center;
+}
+/*p {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}*/
+a:link,
+a:hover,
+a:active,
+a:visited {
+  transition: color 150ms;
+  color:rgb(0, 0,255);
+  text-decoration: none;
+}
+a:hover {
+  color: #847f8d;
+  text-decoration: underline;
+}
+.contain {
+  width: 100%;
+}
+/*.row {
+  overflow: scroll;
+  width: 100%;
+}*/
+.row__inner {
+  overflow: scroll;
+  width: 100%;
+  transition: 450ms transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 70.3125px 0;
+  padding-bottom: 10px;
+}
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 140.625px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+}
+.tile__img {
+  width: 250px;
+  height: 140.625px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  transition: 450ms opacity;
+}
+.tile__details:after,
+.tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: #000;
+}
+.tile__details:after {
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.tile__details:before {
+  content: '▶';
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
+}
+.tile:hover .tile__details {
+  opacity: 1;
+}
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+.row__inner:hover {
+  transform: translate3d(-62.5px, 0, 0);
+}
+.row__inner:hover .tile {
+  opacity: 0.3;
+}
+.row__inner:hover .tile:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.tile:hover ~ .tile {
+  transform: translate3d(125px, 0, 0);
+}
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+  }
+  ul li {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-h2{
-    text-align: center;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 80px;
-    color: aqua;
-    text-shadow: 0px 0px 6px black;
-
-}
-.content-all{  
-    width: 210px;
-    margin: auto;
-    perspective: 900px;
-    position: relative;
-    margin-top: 0px;
-    animation-play-state: paused;
-    cursor: pointer;  
-}
-
-.content-carrousel{
-    width: 100%;
+  }
+  
+  header h1 {
+    padding-left: 1rem;
+  }
+  
+  .caption {
     position: absolute;
-    animation: rotar 40s infinite linear;
-    transform-style: preserve-3d;
-    
-    
-}
-.content-carrousel:hover{
-    animation-play-state: paused;
-    cursor: pointer; 
-    
-    
-    }
-.content-carrousel figure{  
-width: 100%;
-height: 200px;
-overflow: hidden;
-position: absolute;
-box-shadow: 0px 0px 20px 0px black;
-transition: all 300ms;
-}
-.content-carrousel figure :hover{
-    box-shadow: 0px 0px 0px 0px black;
-}
-.content-carrousel img :hover{
-    transform: scale(1,1);
-    transition: all 300ms;
-    
-}
-.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
-.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
-.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
-.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
-.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
-.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
-.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
-.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
-.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
-.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
-
-.content-carrousel img{  
+    color: white;
     width: 100%;
-    transition: all 300ms;
-    transform: scale(1.2);
-    transition: all 300ms;       
-}
-
-@keyframes rotar{
-    from{
-        transform: rotateY(0deg);
+    margin-left: 1rem;
+  }
+  
+  .instructions {
+    padding-left: 1rem;
+    color: #aaa;
+  }
+  
+  .slider {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  
+  .slider-inner {
+    animation: rotate 9s infinite;
+  }
+  .slider-inner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translateX(0);
     }
-    to{
-        transform: rotateY(360deg);
+    15% {
+      transform: translateX(0);
     }
-}
+    30% {
+      transform: translateX(-100vw);
+    }
+    45% {
+      transform: translateX(-100vw);
+    }
+    60% {
+      transform: translateX(-200vw);
+    }
+    75% {
+      transform: translateX(-200vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
+
+  /*-----*******************************************************************************************************
+  ****************************************************************************************************************
+  ***************************************************************************************************************-----------*/
+  /*=================================================NUEVO CARROUSEL2===================================================
+  =========================================================================================================================
+  ============================================================================================================================*/
+ /*body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    padding-top: 2em;
+  }*/
+  
+  .carousel {
+    border: 0.1em solid #ccc;
+    margin-bottom: 1em;
+    position: relative;
+    width: 100%;
+    height: 2.7em;
+    z-index: 0;
+    text-align: center;
+    border-style: double;
+    border-spacing: 0.1em;
+    border-width: 0.2em;
+  }
+  .carousel-height-5 {
+    height: 5em;
+  }
+  .carousel-height-6 {
+    height: 6em;
+  }
+  .carousel-height-7 {
+    height: 7em;
+  }
+  .carousel-height-8 {
+    height: 8em;
+  }
+  .carousel-height-9 {
+    height: 9em;
+  }
+  .carousel-height-10 {
+    height: 10em;
+  }
+  .carousel-height-11 {
+    height: 11em;
+  }
+  .carousel-height-12 {
+    height: 12em;
+  }
+  .carousel-height-13 {
+    height: 13em;
+  }
+  .carousel-height-14 {
+    height: 14em;
+  }
+  .carousel-height-15 {
+    height: 15em;
+  }
+  .carousel-height-16 {
+    height: 16em;
+  }
+  .carousel-height-17 {
+    height: 17em;
+  }
+  .carousel-height-18 {
+    height: 18em;
+  }
+  .carousel-height-19 {
+    height: 19em;
+  }
+  .carousel-height-20 {
+    height: 20em;
+  }
+  .carousel-height-21 {
+    height: 21em;
+  }
+  .carousel-height-22 {
+    height: 22em;
+  }
+  .carousel-height-23 {
+    height: 23em;
+  }
+  .carousel-height-24 {
+    height: 24em;
+  }
+  .carousel-height-25 {
+    height: 25em;
+  }
+  @media screen and (max-width: 200em) {
+    .carousel-1x1 {
+      padding-top: 195.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 129.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 145.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 115.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 108.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 95.7em;
+    }
+  }
+  @media screen and (max-width: 199em) {
+    .carousel-1x1 {
+      padding-top: 194.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 128.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 144.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 115.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 107.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 95.2em;
+    }
+  }
+  @media screen and (max-width: 198em) {
+    .carousel-1x1 {
+      padding-top: 193.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 127.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 144.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 114.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 107.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 94.7em;
+    }
+  }
+  @media screen and (max-width: 197em) {
+    .carousel-1x1 {
+      padding-top: 192.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 127.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 143.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 113.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 106.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 94.2em;
+    }
+  }
+  @media screen and (max-width: 196em) {
+    .carousel-1x1 {
+      padding-top: 191.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 126.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 142.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 113.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 105.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 93.7em;
+    }
+  }
+  @media screen and (max-width: 195em) {
+    .carousel-1x1 {
+      padding-top: 190.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 125.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 141.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 112.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 105.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 93.2em;
+    }
+  }
+  @media screen and (max-width: 194em) {
+    .carousel-1x1 {
+      padding-top: 189.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 125.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 141.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 112.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 104.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 92.7em;
+    }
+  }
+  @media screen and (max-width: 193em) {
+    .carousel-1x1 {
+      padding-top: 188.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 124.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 140.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 111.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 104.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 92.2em;
+    }
+  }
+  @media screen and (max-width: 192em) {
+    .carousel-1x1 {
+      padding-top: 187.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 123.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 139.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 110.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 103.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 91.7em;
+    }
+  }
+  @media screen and (max-width: 191em) {
+    .carousel-1x1 {
+      padding-top: 186.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 123.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 138.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 110.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 103.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 91.2em;
+    }
+  }
+  @media screen and (max-width: 190em) {
+    .carousel-1x1 {
+      padding-top: 185.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 122.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 138.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 109.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 102.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 90.7em;
+    }
+  }
+  @media screen and (max-width: 189em) {
+    .carousel-1x1 {
+      padding-top: 184.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 121.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 137.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 109.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 102.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 90.2em;
+    }
+  }
+  @media screen and (max-width: 188em) {
+    .carousel-1x1 {
+      padding-top: 183.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 121.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 136.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 108.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 101.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 89.7em;
+    }
+  }
+  @media screen and (max-width: 187em) {
+    .carousel-1x1 {
+      padding-top: 182.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 120.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 135.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 107.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 100.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 89.2em;
+    }
+  }
+  @media screen and (max-width: 186em) {
+    .carousel-1x1 {
+      padding-top: 181.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 119.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 135.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 107.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 100.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 88.7em;
+    }
+  }
+  @media screen and (max-width: 185em) {
+    .carousel-1x1 {
+      padding-top: 180.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 119.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 134.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 106.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 99.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 88.2em;
+    }
+  }
+  @media screen and (max-width: 184em) {
+    .carousel-1x1 {
+      padding-top: 179.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 118.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 133.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 106.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 99.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 87.7em;
+    }
+  }
+  @media screen and (max-width: 183em) {
+    .carousel-1x1 {
+      padding-top: 178.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 117.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 132.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 105.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 98.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 87.2em;
+    }
+  }
+  @media screen and (max-width: 182em) {
+    .carousel-1x1 {
+      padding-top: 177.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 117.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 132.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 104.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 98.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 86.7em;
+    }
+  }
+  @media screen and (max-width: 181em) {
+    .carousel-1x1 {
+      padding-top: 176.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 116.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 131.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 104.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 97.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 86.2em;
+    }
+  }
+  @media screen and (max-width: 180em) {
+    .carousel-1x1 {
+      padding-top: 175.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 115.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 130.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 103.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 96.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 85.7em;
+    }
+  }
+  @media screen and (max-width: 179em) {
+    .carousel-1x1 {
+      padding-top: 174.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 115.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 129.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 103.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 96.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 85.2em;
+    }
+  }
+  @media screen and (max-width: 178em) {
+    .carousel-1x1 {
+      padding-top: 173.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 114.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 129.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 102.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 95.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 84.7em;
+    }
+  }
+  @media screen and (max-width: 177em) {
+    .carousel-1x1 {
+      padding-top: 172.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 113.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 128.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 101.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 95.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 84.2em;
+    }
+  }
+  @media screen and (max-width: 176em) {
+    .carousel-1x1 {
+      padding-top: 171.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 113.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 127.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 101.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 94.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 83.7em;
+    }
+  }
+  @media screen and (max-width: 175em) {
+    .carousel-1x1 {
+      padding-top: 170.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 112.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 126.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 100.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 94.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 83.2em;
+    }
+  }
+  @media screen and (max-width: 174em) {
+    .carousel-1x1 {
+      padding-top: 169.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 111.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 126.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 100.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 93.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 82.7em;
+    }
+  }
+  @media screen and (max-width: 173em) {
+    .carousel-1x1 {
+      padding-top: 168.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 111.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 125.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 99.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 93.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 82.2em;
+    }
+  }
+  @media screen and (max-width: 172em) {
+    .carousel-1x1 {
+      padding-top: 167.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 110.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 124.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 98.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 92.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 81.7em;
+    }
+  }
+  @media screen and (max-width: 171em) {
+    .carousel-1x1 {
+      padding-top: 166.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 109.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 123.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 98.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 91.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 81.2em;
+    }
+  }
+  @media screen and (max-width: 170em) {
+    .carousel-1x1 {
+      padding-top: 165.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 109.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 123.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 97.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 91.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 80.7em;
+    }
+  }
+  @media screen and (max-width: 169em) {
+    .carousel-1x1 {
+      padding-top: 164.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 108.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 122.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 97.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 90.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 80.2em;
+    }
+  }
+  @media screen and (max-width: 168em) {
+    .carousel-1x1 {
+      padding-top: 163.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 107.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 121.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 96.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 90.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 79.7em;
+    }
+  }
+  @media screen and (max-width: 167em) {
+    .carousel-1x1 {
+      padding-top: 162.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 107.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 120.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 95.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 89.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 79.2em;
+    }
+  }
+  @media screen and (max-width: 166em) {
+    .carousel-1x1 {
+      padding-top: 161.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 106.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 120.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 95.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 89.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 78.7em;
+    }
+  }
+  @media screen and (max-width: 165em) {
+    .carousel-1x1 {
+      padding-top: 160.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 105.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 119.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 94.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 88.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 78.2em;
+    }
+  }
+  @media screen and (max-width: 164em) {
+    .carousel-1x1 {
+      padding-top: 159.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 105.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 118.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 94.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 87.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 77.7em;
+    }
+  }
+  @media screen and (max-width: 163em) {
+    .carousel-1x1 {
+      padding-top: 158.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 104.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 117.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 93.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 87.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 77.2em;
+    }
+  }
+  @media screen and (max-width: 162em) {
+    .carousel-1x1 {
+      padding-top: 157.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 103.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 117.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 92.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 86.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 76.7em;
+    }
+  }
+  @media screen and (max-width: 161em) {
+    .carousel-1x1 {
+      padding-top: 156.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 103.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 116.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 92.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 86.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 76.2em;
+    }
+  }
+  @media screen and (max-width: 160em) {
+    .carousel-1x1 {
+      padding-top: 155.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 102.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 115.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 91.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 85.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 75.7em;
+    }
+  }
+  @media screen and (max-width: 159em) {
+    .carousel-1x1 {
+      padding-top: 154.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 101.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 114.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 91.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 85.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 75.2em;
+    }
+  }
+  @media screen and (max-width: 158em) {
+    .carousel-1x1 {
+      padding-top: 153.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 101.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 114.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 90.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 84.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 74.7em;
+    }
+  }
+  @media screen and (max-width: 157em) {
+    .carousel-1x1 {
+      padding-top: 152.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 100.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 113.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 89.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 84.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 74.2em;
+    }
+  }
+  @media screen and (max-width: 156em) {
+    .carousel-1x1 {
+      padding-top: 151.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 99.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 112.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 89.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 83.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 73.7em;
+    }
+  }
+  @media screen and (max-width: 155em) {
+    .carousel-1x1 {
+      padding-top: 150.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 99.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 111.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 88.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 82.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 73.2em;
+    }
+  }
+  @media screen and (max-width: 154em) {
+    .carousel-1x1 {
+      padding-top: 149.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 98.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 111.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 88.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 82.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 72.7em;
+    }
+  }
+  @media screen and (max-width: 153em) {
+    .carousel-1x1 {
+      padding-top: 148.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 97.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 110.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 87.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 81.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 72.2em;
+    }
+  }
+  @media screen and (max-width: 152em) {
+    .carousel-1x1 {
+      padding-top: 147.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 97.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 109.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 86.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 81.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 71.7em;
+    }
+  }
+  @media screen and (max-width: 151em) {
+    .carousel-1x1 {
+      padding-top: 146.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 96.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 108.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 86.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 80.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 71.2em;
+    }
+  }
+  @media screen and (max-width: 150em) {
+    .carousel-1x1 {
+      padding-top: 145.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 95.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 108.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 85.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 80.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 70.7em;
+    }
+  }
+  @media screen and (max-width: 149em) {
+    .carousel-1x1 {
+      padding-top: 144.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 95.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 107.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 85.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 79.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 70.2em;
+    }
+  }
+  @media screen and (max-width: 148em) {
+    .carousel-1x1 {
+      padding-top: 143.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 94.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 106.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 84.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 78.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 69.7em;
+    }
+  }
+  @media screen and (max-width: 147em) {
+    .carousel-1x1 {
+      padding-top: 142.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 93.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 105.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 83.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 78.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 69.2em;
+    }
+  }
+  @media screen and (max-width: 146em) {
+    .carousel-1x1 {
+      padding-top: 141.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 93.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 105.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 83.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 77.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 68.7em;
+    }
+  }
+  @media screen and (max-width: 145em) {
+    .carousel-1x1 {
+      padding-top: 140.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 92.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 104.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 82.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 77.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 68.2em;
+    }
+  }
+  @media screen and (max-width: 144em) {
+    .carousel-1x1 {
+      padding-top: 139.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 91.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 103.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 82.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 76.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 67.7em;
+    }
+  }
+  @media screen and (max-width: 143em) {
+    .carousel-1x1 {
+      padding-top: 138.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 91.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 102.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 81.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 76.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 67.2em;
+    }
+  }
+  @media screen and (max-width: 142em) {
+    .carousel-1x1 {
+      padding-top: 137.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 90.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 102.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 80.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 75.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 66.7em;
+    }
+  }
+  @media screen and (max-width: 141em) {
+    .carousel-1x1 {
+      padding-top: 136.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 89.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 101.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 80.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 75.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 66.2em;
+    }
+  }
+  @media screen and (max-width: 140em) {
+    .carousel-1x1 {
+      padding-top: 135.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 89.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 100.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 79.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 74.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 65.7em;
+    }
+  }
+  @media screen and (max-width: 139em) {
+    .carousel-1x1 {
+      padding-top: 134.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 88.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 99.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 79.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 73.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 65.2em;
+    }
+  }
+  @media screen and (max-width: 138em) {
+    .carousel-1x1 {
+      padding-top: 133.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 87.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 99.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 78.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 73.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 64.7em;
+    }
+  }
+  @media screen and (max-width: 137em) {
+    .carousel-1x1 {
+      padding-top: 132.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 87.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 98.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 77.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 72.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 64.2em;
+    }
+  }
+  @media screen and (max-width: 136em) {
+    .carousel-1x1 {
+      padding-top: 131.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 86.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 97.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 77.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 72.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 63.7em;
+    }
+  }
+  @media screen and (max-width: 135em) {
+    .carousel-1x1 {
+      padding-top: 130.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 85.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 96.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 76.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 71.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 63.2em;
+    }
+  }
+  @media screen and (max-width: 134em) {
+    .carousel-1x1 {
+      padding-top: 129.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 85.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 96.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 76.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 71.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 62.7em;
+    }
+  }
+  @media screen and (max-width: 133em) {
+    .carousel-1x1 {
+      padding-top: 128.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 84.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 95.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 75.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 70.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 62.2em;
+    }
+  }
+  @media screen and (max-width: 132em) {
+    .carousel-1x1 {
+      padding-top: 127.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 83.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 94.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 74.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 69.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 61.7em;
+    }
+  }
+  @media screen and (max-width: 131em) {
+    .carousel-1x1 {
+      padding-top: 126.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 83.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 93.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 74.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 69.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 61.2em;
+    }
+  }
+  @media screen and (max-width: 130em) {
+    .carousel-1x1 {
+      padding-top: 125.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 82.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 93.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 73.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 68.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 60.7em;
+    }
+  }
+  @media screen and (max-width: 129em) {
+    .carousel-1x1 {
+      padding-top: 124.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 81.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 92.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 73.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 68.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 60.2em;
+    }
+  }
+  @media screen and (max-width: 128em) {
+    .carousel-1x1 {
+      padding-top: 123.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 81.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 91.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 72.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 67.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 59.7em;
+    }
+  }
+  @media screen and (max-width: 127em) {
+    .carousel-1x1 {
+      padding-top: 122.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 80.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 90.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 71.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 67.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 59.2em;
+    }
+  }
+  @media screen and (max-width: 126em) {
+    .carousel-1x1 {
+      padding-top: 121.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 79.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 90.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 71.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 66.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 58.7em;
+    }
+  }
+  @media screen and (max-width: 125em) {
+    .carousel-1x1 {
+      padding-top: 120.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 79.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 89.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 70.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 66.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 58.2em;
+    }
+  }
+  @media screen and (max-width: 124em) {
+    .carousel-1x1 {
+      padding-top: 119.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 78.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 88.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 70.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 65.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 57.7em;
+    }
+  }
+  @media screen and (max-width: 123em) {
+    .carousel-1x1 {
+      padding-top: 118.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 77.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 87.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 69.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 64.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 57.2em;
+    }
+  }
+  @media screen and (max-width: 122em) {
+    .carousel-1x1 {
+      padding-top: 117.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 77.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 87.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 68.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 64.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 56.7em;
+    }
+  }
+  @media screen and (max-width: 121em) {
+    .carousel-1x1 {
+      padding-top: 116.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 76.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 86.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 68.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 63.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 56.2em;
+    }
+  }
+  @media screen and (max-width: 120em) {
+    .carousel-1x1 {
+      padding-top: 115.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 75.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 85.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 67.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 63.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 55.7em;
+    }
+  }
+  @media screen and (max-width: 119em) {
+    .carousel-1x1 {
+      padding-top: 114.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 75.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 84.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 67.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 62.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 55.2em;
+    }
+  }
+  @media screen and (max-width: 118em) {
+    .carousel-1x1 {
+      padding-top: 113.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 74.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 84.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 66.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 62.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 54.7em;
+    }
+  }
+  @media screen and (max-width: 117em) {
+    .carousel-1x1 {
+      padding-top: 112.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 73.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 83.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 65.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 61.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 54.2em;
+    }
+  }
+  @media screen and (max-width: 116em) {
+    .carousel-1x1 {
+      padding-top: 111.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 73.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 82.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 65.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 60.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 53.7em;
+    }
+  }
+  @media screen and (max-width: 115em) {
+    .carousel-1x1 {
+      padding-top: 110.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 72.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 81.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 64.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 60.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 53.2em;
+    }
+  }
+  @media screen and (max-width: 114em) {
+    .carousel-1x1 {
+      padding-top: 109.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 71.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 81.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 64.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 59.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 52.7em;
+    }
+  }
+  @media screen and (max-width: 113em) {
+    .carousel-1x1 {
+      padding-top: 108.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 71.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 80.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 63.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 59.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 52.2em;
+    }
+  }
+  @media screen and (max-width: 112em) {
+    .carousel-1x1 {
+      padding-top: 107.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 70.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 79.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 62.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 58.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 51.7em;
+    }
+  }
+  @media screen and (max-width: 111em) {
+    .carousel-1x1 {
+      padding-top: 106.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 69.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 78.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 62.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 58.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 51.2em;
+    }
+  }
+  @media screen and (max-width: 110em) {
+    .carousel-1x1 {
+      padding-top: 105.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 69.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 78.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 61.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 57.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 50.7em;
+    }
+  }
+  @media screen and (max-width: 109em) {
+    .carousel-1x1 {
+      padding-top: 104.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 68.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 77.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 61.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 57.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 50.2em;
+    }
+  }
+  @media screen and (max-width: 108em) {
+    .carousel-1x1 {
+      padding-top: 103.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 67.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 76.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 60.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 56.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 49.7em;
+    }
+  }
+  @media screen and (max-width: 107em) {
+    .carousel-1x1 {
+      padding-top: 102.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 67.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 75.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 59.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 55.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 49.2em;
+    }
+  }
+  @media screen and (max-width: 106em) {
+    .carousel-1x1 {
+      padding-top: 101.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 66.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 75.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 59.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 55.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 48.7em;
+    }
+  }
+  @media screen and (max-width: 105em) {
+    .carousel-1x1 {
+      padding-top: 100.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 65.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 74.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 58.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 54.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 48.2em;
+    }
+  }
+  @media screen and (max-width: 104em) {
+    .carousel-1x1 {
+      padding-top: 99.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 65.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 73.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 58.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 54.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 47.7em;
+    }
+  }
+  @media screen and (max-width: 103em) {
+    .carousel-1x1 {
+      padding-top: 98.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 64.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 72.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 57.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 53.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 47.2em;
+    }
+  }
+  @media screen and (max-width: 102em) {
+    .carousel-1x1 {
+      padding-top: 97.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 63.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 72.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 56.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 53.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 46.7em;
+    }
+  }
+  @media screen and (max-width: 101em) {
+    .carousel-1x1 {
+      padding-top: 96.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 63.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 71.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 56.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 52.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 46.2em;
+    }
+  }
+  @media screen and (max-width: 100em) {
+    .carousel-1x1 {
+      padding-top: 95.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 62.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 70.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 55.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 51.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 45.7em;
+    }
+  }
+  @media screen and (max-width: 99em) {
+    .carousel-1x1 {
+      padding-top: 94.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 61.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 69.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 55.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 51.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 45.2em;
+    }
+  }
+  @media screen and (max-width: 98em) {
+    .carousel-1x1 {
+      padding-top: 93.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 61.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 69.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 54.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 50.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 44.7em;
+    }
+  }
+  @media screen and (max-width: 97em) {
+    .carousel-1x1 {
+      padding-top: 92.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 60.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 68.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 53.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 50.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 44.2em;
+    }
+  }
+  @media screen and (max-width: 96em) {
+    .carousel-1x1 {
+      padding-top: 91.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 59.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 67.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 53.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 49.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 43.7em;
+    }
+  }
+  @media screen and (max-width: 95em) {
+    .carousel-1x1 {
+      padding-top: 90.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 59.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 66.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 52.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 49.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 43.2em;
+    }
+  }
+  @media screen and (max-width: 94em) {
+    .carousel-1x1 {
+      padding-top: 89.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 58.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 66.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 52.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 48.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 42.7em;
+    }
+  }
+  @media screen and (max-width: 93em) {
+    .carousel-1x1 {
+      padding-top: 88.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 57.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 65.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 51.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 48.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 42.2em;
+    }
+  }
+  @media screen and (max-width: 92em) {
+    .carousel-1x1 {
+      padding-top: 87.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 57.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 64.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 50.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 47.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 41.7em;
+    }
+  }
+  @media screen and (max-width: 91em) {
+    .carousel-1x1 {
+      padding-top: 86.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 56.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 63.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 50.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 46.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 41.2em;
+    }
+  }
+  @media screen and (max-width: 90em) {
+    .carousel-1x1 {
+      padding-top: 85.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 55.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 63.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 49.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 46.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 40.7em;
+    }
+  }
+  @media screen and (max-width: 89em) {
+    .carousel-1x1 {
+      padding-top: 84.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 55.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 62.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 49.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 45.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 40.2em;
+    }
+  }
+  @media screen and (max-width: 88em) {
+    .carousel-1x1 {
+      padding-top: 83.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 54.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 61.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 48.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 45.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 39.7em;
+    }
+  }
+  @media screen and (max-width: 87em) {
+    .carousel-1x1 {
+      padding-top: 82.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 53.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 60.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 47.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 44.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 39.2em;
+    }
+  }
+  @media screen and (max-width: 86em) {
+    .carousel-1x1 {
+      padding-top: 81.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 53.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 60.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 47.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 44.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 38.7em;
+    }
+  }
+  @media screen and (max-width: 85em) {
+    .carousel-1x1 {
+      padding-top: 80.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 52.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 59.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 46.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 43.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 38.2em;
+    }
+  }
+  @media screen and (max-width: 84em) {
+    .carousel-1x1 {
+      padding-top: 79.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 51.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 58.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 46.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 42.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 37.7em;
+    }
+  }
+  @media screen and (max-width: 83em) {
+    .carousel-1x1 {
+      padding-top: 78.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 51.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 57.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 45.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 42.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 37.2em;
+    }
+  }
+  @media screen and (max-width: 82em) {
+    .carousel-1x1 {
+      padding-top: 77.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 50.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 57.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 44.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 41.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 36.7em;
+    }
+  }
+  @media screen and (max-width: 81em) {
+    .carousel-1x1 {
+      padding-top: 76.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 49.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 56.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 44.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 41.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 36.2em;
+    }
+  }
+  @media screen and (max-width: 80em) {
+    .carousel-1x1 {
+      padding-top: 75.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 49.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 55.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 43.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 40.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 35.7em;
+    }
+  }
+  @media screen and (max-width: 79em) {
+    .carousel-1x1 {
+      padding-top: 74.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 48.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 54.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 43.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 40.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 35.2em;
+    }
+  }
+  @media screen and (max-width: 78em) {
+    .carousel-1x1 {
+      padding-top: 73.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 47.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 54.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 42.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 39.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 34.7em;
+    }
+  }
+  @media screen and (max-width: 77em) {
+    .carousel-1x1 {
+      padding-top: 72.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 47.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 53.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 41.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 39.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 34.2em;
+    }
+  }
+  @media screen and (max-width: 76em) {
+    .carousel-1x1 {
+      padding-top: 71.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 46.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 52.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 41.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 38.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 33.7em;
+    }
+  }
+  @media screen and (max-width: 75em) {
+    .carousel-1x1 {
+      padding-top: 70.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 45.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 51.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 40.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 37.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 33.2em;
+    }
+  }
+  @media screen and (max-width: 74em) {
+    .carousel-1x1 {
+      padding-top: 69.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 45.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 51.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 40.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 37.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 32.7em;
+    }
+  }
+  @media screen and (max-width: 73em) {
+    .carousel-1x1 {
+      padding-top: 68.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 44.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 50.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 39.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 36.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 32.2em;
+    }
+  }
+  @media screen and (max-width: 72em) {
+    .carousel-1x1 {
+      padding-top: 67.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 43.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 49.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 38.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 36.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 31.7em;
+    }
+  }
+  @media screen and (max-width: 71em) {
+    .carousel-1x1 {
+      padding-top: 66.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 43.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 48.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 38.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 35.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 31.2em;
+    }
+  }
+  @media screen and (max-width: 70em) {
+    .carousel-1x1 {
+      padding-top: 65.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 42.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 48.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 37.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 35.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 30.7em;
+    }
+  }
+  @media screen and (max-width: 69em) {
+    .carousel-1x1 {
+      padding-top: 64.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 41.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 47.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 37.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 34.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 30.2em;
+    }
+  }
+  @media screen and (max-width: 68em) {
+    .carousel-1x1 {
+      padding-top: 63.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 41.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 46.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 36.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 33.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 29.7em;
+    }
+  }
+  @media screen and (max-width: 67em) {
+    .carousel-1x1 {
+      padding-top: 62.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 40.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 45.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 35.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 33.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 29.2em;
+    }
+  }
+  @media screen and (max-width: 66em) {
+    .carousel-1x1 {
+      padding-top: 61.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 39.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 45.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 35.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 32.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 28.7em;
+    }
+  }
+  @media screen and (max-width: 65em) {
+    .carousel-1x1 {
+      padding-top: 60.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 39.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 44.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 34.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 32.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 28.2em;
+    }
+  }
+  @media screen and (max-width: 64em) {
+    .carousel-1x1 {
+      padding-top: 59.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 38.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 43.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 34.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 31.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 27.7em;
+    }
+  }
+  @media screen and (max-width: 63em) {
+    .carousel-1x1 {
+      padding-top: 58.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 37.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 42.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 33.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 31.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 27.2em;
+    }
+  }
+  @media screen and (max-width: 62em) {
+    .carousel-1x1 {
+      padding-top: 57.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 37.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 42.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 32.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 30.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 26.7em;
+    }
+  }
+  @media screen and (max-width: 61em) {
+    .carousel-1x1 {
+      padding-top: 56.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 36.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 41.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 32.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 30.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 26.2em;
+    }
+  }
+  @media screen and (max-width: 60em) {
+    .carousel-1x1 {
+      padding-top: 55.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 35.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 40.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 31.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 29.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 25.7em;
+    }
+  }
+  @media screen and (max-width: 59em) {
+    .carousel-1x1 {
+      padding-top: 54.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 35.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 39.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 31.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 28.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 25.2em;
+    }
+  }
+  @media screen and (max-width: 58em) {
+    .carousel-1x1 {
+      padding-top: 53.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 34.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 39.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 30.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 28.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 24.7em;
+    }
+  }
+  @media screen and (max-width: 57em) {
+    .carousel-1x1 {
+      padding-top: 52.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 33.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 38.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 29.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 27.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 24.2em;
+    }
+  }
+  @media screen and (max-width: 56em) {
+    .carousel-1x1 {
+      padding-top: 51.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 33.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 37.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 29.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 27.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 23.7em;
+    }
+  }
+  @media screen and (max-width: 55em) {
+    .carousel-1x1 {
+      padding-top: 50.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 32.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 36.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 28.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 26.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 23.2em;
+    }
+  }
+  @media screen and (max-width: 54em) {
+    .carousel-1x1 {
+      padding-top: 49.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 31.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 36.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 28.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 26.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 22.7em;
+    }
+  }
+  @media screen and (max-width: 53em) {
+    .carousel-1x1 {
+      padding-top: 48.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 31.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 35.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 27.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 25.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 22.2em;
+    }
+  }
+  @media screen and (max-width: 52em) {
+    .carousel-1x1 {
+      padding-top: 47.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 30.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 34.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 26.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 24.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 21.7em;
+    }
+  }
+  @media screen and (max-width: 51em) {
+    .carousel-1x1 {
+      padding-top: 46.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 29.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 33.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 26.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 24.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 21.2em;
+    }
+  }
+  @media screen and (max-width: 50em) {
+    .carousel-1x1 {
+      padding-top: 45.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 29.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 33.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 25.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 23.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 20.7em;
+    }
+  }
+  @media screen and (max-width: 49em) {
+    .carousel-1x1 {
+      padding-top: 44.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 28.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 32.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 25.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 23.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 20.2em;
+    }
+  }
+  @media screen and (max-width: 48em) {
+    .carousel-1x1 {
+      padding-top: 43.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 27.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 31.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 24.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 22.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 19.7em;
+    }
+  }
+  @media screen and (max-width: 47em) {
+    .carousel-1x1 {
+      padding-top: 42.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 27.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 30.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 23.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 22.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 19.2em;
+    }
+  }
+  @media screen and (max-width: 46em) {
+    .carousel-1x1 {
+      padding-top: 41.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 26.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 30.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 23.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 21.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 18.7em;
+    }
+  }
+  @media screen and (max-width: 45em) {
+    .carousel-1x1 {
+      padding-top: 40.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 25.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 29.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 22.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 21.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 18.2em;
+    }
+  }
+  @media screen and (max-width: 44em) {
+    .carousel-1x1 {
+      padding-top: 39.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 25.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 28.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 22.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 20.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 17.7em;
+    }
+  }
+  @media screen and (max-width: 43em) {
+    .carousel-1x1 {
+      padding-top: 38.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 24.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 27.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 21.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 19.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 17.2em;
+    }
+  }
+  @media screen and (max-width: 42em) {
+    .carousel-1x1 {
+      padding-top: 37.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 23.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 27.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 20.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 19.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 16.7em;
+    }
+  }
+  @media screen and (max-width: 41em) {
+    .carousel-1x1 {
+      padding-top: 36.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 23.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 26.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 20.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 18.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 16.2em;
+    }
+  }
+  @media screen and (max-width: 40em) {
+    .carousel-1x1 {
+      padding-top: 35.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 22.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 25.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 19.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 18.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 15.7em;
+    }
+  }
+  @media screen and (max-width: 39em) {
+    .carousel-1x1 {
+      padding-top: 34.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 21.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 24.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 19.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 17.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 15.2em;
+    }
+  }
+  @media screen and (max-width: 38em) {
+    .carousel-1x1 {
+      padding-top: 33.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 21.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 24.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 18.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 17.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 14.7em;
+    }
+  }
+  @media screen and (max-width: 37em) {
+    .carousel-1x1 {
+      padding-top: 32.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 20.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 23.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 17.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 16.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 14.2em;
+    }
+  }
+  @media screen and (max-width: 36em) {
+    .carousel-1x1 {
+      padding-top: 31.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 19.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 22.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 17.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 15.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 13.7em;
+    }
+  }
+  @media screen and (max-width: 35em) {
+    .carousel-1x1 {
+      padding-top: 30.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 19.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 21.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 16.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 15.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 13.2em;
+    }
+  }
+  @media screen and (max-width: 34em) {
+    .carousel-1x1 {
+      padding-top: 29.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 18.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 21.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 16.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 14.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 12.7em;
+    }
+  }
+  @media screen and (max-width: 33em) {
+    .carousel-1x1 {
+      padding-top: 28.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 17.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 20.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 15.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 14.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 12.2em;
+    }
+  }
+  @media screen and (max-width: 32em) {
+    .carousel-1x1 {
+      padding-top: 27.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 17.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 19.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 14.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 13.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 11.7em;
+    }
+  }
+  @media screen and (max-width: 31em) {
+    .carousel-1x1 {
+      padding-top: 26.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 16.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 18.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 14.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 13.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 11.2em;
+    }
+  }
+  @media screen and (max-width: 30em) {
+    .carousel-1x1 {
+      padding-top: 25.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 15.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 18.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 13.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 12.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 10.7em;
+    }
+  }
+  @media screen and (max-width: 29em) {
+    .carousel-1x1 {
+      padding-top: 24.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 15.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 17.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 13.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 12.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 10.2em;
+    }
+  }
+  @media screen and (max-width: 28em) {
+    .carousel-1x1 {
+      padding-top: 23.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 14.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 16.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 12.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 11.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 9.7em;
+    }
+  }
+  @media screen and (max-width: 27em) {
+    .carousel-1x1 {
+      padding-top: 22.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 13.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 15.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 11.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 10.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 9.2em;
+    }
+  }
+  @media screen and (max-width: 26em) {
+    .carousel-1x1 {
+      padding-top: 21.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 13.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 15.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 11.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 10.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 8.7em;
+    }
+  }
+  @media screen and (max-width: 25em) {
+    .carousel-1x1 {
+      padding-top: 20.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 12.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 14.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 10.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 9.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 8.2em;
+    }
+  }
+  @media screen and (max-width: 24em) {
+    .carousel-1x1 {
+      padding-top: 19.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 11.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 13.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 10.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 9.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 7.7em;
+    }
+  }
+  @media screen and (max-width: 23em) {
+    .carousel-1x1 {
+      padding-top: 18.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 11.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 12.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 9.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 8.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 7.2em;
+    }
+  }
+  @media screen and (max-width: 22em) {
+    .carousel-1x1 {
+      padding-top: 17.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 10.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 12.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 8.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 8.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 6.7em;
+    }
+  }
+  @media screen and (max-width: 21em) {
+    .carousel-1x1 {
+      padding-top: 16.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 9.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 11.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 8.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 7.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 6.2em;
+    }
+  }
+  @media screen and (max-width: 20em) {
+    .carousel-1x1 {
+      padding-top: 15.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 9.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 10.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 7.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 6.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 5.7em;
+    }
+  }
+  @media screen and (max-width: 19em) {
+    .carousel-1x1 {
+      padding-top: 14.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 8.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 9.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 7.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 6.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 5.2em;
+    }
+  }
+  @media screen and (max-width: 18em) {
+    .carousel-1x1 {
+      padding-top: 13.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 7.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 9.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 6.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 5.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 4.7em;
+    }
+  }
+  @media screen and (max-width: 17em) {
+    .carousel-1x1 {
+      padding-top: 12.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 7.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 8.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 5.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 5.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 4.2em;
+    }
+  }
+  @media screen and (max-width: 16em) {
+    .carousel-1x1 {
+      padding-top: 11.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 6.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 7.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 5.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 4.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 3.7em;
+    }
+  }
+  @media screen and (max-width: 15em) {
+    .carousel-1x1 {
+      padding-top: 10.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 5.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 6.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 4.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 4.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 3.2em;
+    }
+  }
+  @media screen and (max-width: 14em) {
+    .carousel-1x1 {
+      padding-top: 9.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 5.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 6.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 4.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 3.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 2.7em;
+    }
+  }
+  @media screen and (max-width: 13em) {
+    .carousel-1x1 {
+      padding-top: 8.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 4.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 5.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 3.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 3.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 2.2em;
+    }
+  }
+  @media screen and (max-width: 12em) {
+    .carousel-1x1 {
+      padding-top: 7.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 3.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 4.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 2.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 2.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 1.7em;
+    }
+  }
+  @media screen and (max-width: 11em) {
+    .carousel-1x1 {
+      padding-top: 6.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 3.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 3.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 2.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 1.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 1.2em;
+    }
+  }
+  @media screen and (max-width: 10em) {
+    .carousel-1x1 {
+      padding-top: 5.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 2.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 3.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 1.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 1.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 0.7em;
+    }
+  }
+  .carousel-toggle__wrap {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.4em 0.5em 0.25em;
+    display: inline;
+    border-radius: 0.3em;
+  }
+  .carousel-toggle__wrap.manual-play .playPause {
+    display: none;
+  }
+  .carousel-toggle__wrap.auto-play .playPause {
+    display: inline;
+  }
+  .carousel-block {
+    display: block;
+    padding: 1.5em 1em 1em;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    transition: opacity 0.75s ease-in;
+    overflow: hidden;
+  }
+  .carousel-block img {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    z-index: -1;
+    width: 100%;
+  }
+  .carousel-block__sub {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.75em 1em;
+    position: absolute;
+    bottom: -10em;
+    left: 1em;
+    color: #fff;
+    transition: bottom 0.5s ease-out 0.3s;
+    text-align: left;
+  }
+  .carousel-block__sub a {
+    color: #ff0;
+  }
+  .carousel-block__sub h1 {
+    margin: 0 0 0.5em;
+  }
+  .carousel-block__sub p {
+    margin: 0.5em 0 0;
+  }
+  
+  input.carousel-toggle + .carousel-block {
+    z-index: -100;
+    opacity: 0;
+  }
+  input.carousel-toggle:checked + .carousel-block {
+    z-index: -1;
+    opacity: 1;
+  }
+  input.carousel-toggle:checked + .carousel-block .carousel-block__sub {
+    bottom: 1em;
+  }
+  
+  .previous-next {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    width: 2.25em;
+    font-weight: bold;
+    padding-top: 20%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .previous-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 1;
+    z-index: 1000;
+  }
+  .previous-next .label-str {
+    display: block;
+    text-indent: -1000em;
+  }
+  .previous-next__previous {
+    left: 0%;
+  }
+  .previous-next__next {
+    right: 0%;
+  }
+
+  /*-----*******************************************************************************************************
+  ****************************************************************************************************************
+  ***************************************************************************************************************-----------*/
+  /*=================================================NUEVO CARROUSEL3===================================================
+  =========================================================================================================================
+  ============================================================================================================================*/
+  body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    padding-top: 2em;
+  }
+  
+  .carousel {
+    border: 0.1em solid #ccc;
+    margin-bottom: 2em;
+    position: relative;
+    width: 95%;
+    height: 2.7em;
+    z-index: 0;
+    text-align: center;
+    border-style: double;
+    border-spacing: 0.1em;
+    border-width: 0.2em;
+    margin-left: 2%;
+    
+    
+  }
+  .carousel-height-5 {
+    height: 5em;
+  }
+  .carousel-height-6 {
+    height: 6em;
+  }
+  .carousel-height-7 {
+    height: 7em;
+  }
+  .carousel-height-8 {
+    height: 8em;
+  }
+  .carousel-height-9 {
+    height: 9em;
+  }
+  .carousel-height-10 {
+    height: 10em;
+  }
+  .carousel-height-11 {
+    height: 11em;
+  }
+  .carousel-height-12 {
+    height: 12em;
+  }
+  .carousel-height-13 {
+    height: 13em;
+  }
+  .carousel-height-14 {
+    height: 14em;
+  }
+  .carousel-height-15 {
+    height: 15em;
+  }
+  .carousel-height-16 {
+    height: 16em;
+  }
+  .carousel-height-17 {
+    height: 17em;
+  }
+  .carousel-height-18 {
+    height: 18em;
+  }
+  .carousel-height-19 {
+    height: 19em;
+  }
+  .carousel-height-20 {
+    height: 20em;
+  }
+  .carousel-height-21 {
+    height: 21em;
+  }
+  .carousel-height-22 {
+    height: 22em;
+  }
+  .carousel-height-23 {
+    height: 23em;
+  }
+  .carousel-height-24 {
+    height: 24em;
+  }
+  .carousel-height-25 {
+    height: 25em;
+  }
+  @media screen and (max-width: 200em) {
+    .carousel-1x1 {
+      padding-top: 195.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 129.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 145.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 115.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 108.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 95.7em;
+    }
+  }
+  @media screen and (max-width: 199em) {
+    .carousel-1x1 {
+      padding-top: 194.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 128.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 144.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 115.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 107.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 95.2em;
+    }
+  }
+  @media screen and (max-width: 198em) {
+    .carousel-1x1 {
+      padding-top: 193.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 127.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 144.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 114.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 107.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 94.7em;
+    }
+  }
+  @media screen and (max-width: 197em) {
+    .carousel-1x1 {
+      padding-top: 192.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 127.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 143.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 113.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 106.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 94.2em;
+    }
+  }
+  @media screen and (max-width: 196em) {
+    .carousel-1x1 {
+      padding-top: 191.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 126.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 142.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 113.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 105.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 93.7em;
+    }
+  }
+  @media screen and (max-width: 195em) {
+    .carousel-1x1 {
+      padding-top: 190.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 125.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 141.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 112.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 105.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 93.2em;
+    }
+  }
+  @media screen and (max-width: 194em) {
+    .carousel-1x1 {
+      padding-top: 189.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 125.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 141.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 112.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 104.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 92.7em;
+    }
+  }
+  @media screen and (max-width: 193em) {
+    .carousel-1x1 {
+      padding-top: 188.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 124.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 140.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 111.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 104.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 92.2em;
+    }
+  }
+  @media screen and (max-width: 192em) {
+    .carousel-1x1 {
+      padding-top: 187.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 123.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 139.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 110.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 103.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 91.7em;
+    }
+  }
+  @media screen and (max-width: 191em) {
+    .carousel-1x1 {
+      padding-top: 186.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 123.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 138.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 110.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 103.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 91.2em;
+    }
+  }
+  @media screen and (max-width: 190em) {
+    .carousel-1x1 {
+      padding-top: 185.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 122.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 138.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 109.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 102.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 90.7em;
+    }
+  }
+  @media screen and (max-width: 189em) {
+    .carousel-1x1 {
+      padding-top: 184.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 121.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 137.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 109.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 102.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 90.2em;
+    }
+  }
+  @media screen and (max-width: 188em) {
+    .carousel-1x1 {
+      padding-top: 183.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 121.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 136.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 108.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 101.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 89.7em;
+    }
+  }
+  @media screen and (max-width: 187em) {
+    .carousel-1x1 {
+      padding-top: 182.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 120.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 135.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 107.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 100.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 89.2em;
+    }
+  }
+  @media screen and (max-width: 186em) {
+    .carousel-1x1 {
+      padding-top: 181.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 119.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 135.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 107.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 100.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 88.7em;
+    }
+  }
+  @media screen and (max-width: 185em) {
+    .carousel-1x1 {
+      padding-top: 180.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 119.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 134.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 106.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 99.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 88.2em;
+    }
+  }
+  @media screen and (max-width: 184em) {
+    .carousel-1x1 {
+      padding-top: 179.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 118.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 133.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 106.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 99.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 87.7em;
+    }
+  }
+  @media screen and (max-width: 183em) {
+    .carousel-1x1 {
+      padding-top: 178.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 117.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 132.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 105.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 98.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 87.2em;
+    }
+  }
+  @media screen and (max-width: 182em) {
+    .carousel-1x1 {
+      padding-top: 177.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 117.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 132.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 104.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 98.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 86.7em;
+    }
+  }
+  @media screen and (max-width: 181em) {
+    .carousel-1x1 {
+      padding-top: 176.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 116.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 131.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 104.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 97.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 86.2em;
+    }
+  }
+  @media screen and (max-width: 180em) {
+    .carousel-1x1 {
+      padding-top: 175.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 115.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 130.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 103.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 96.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 85.7em;
+    }
+  }
+  @media screen and (max-width: 179em) {
+    .carousel-1x1 {
+      padding-top: 174.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 115.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 129.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 103.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 96.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 85.2em;
+    }
+  }
+  @media screen and (max-width: 178em) {
+    .carousel-1x1 {
+      padding-top: 173.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 114.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 129.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 102.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 95.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 84.7em;
+    }
+  }
+  @media screen and (max-width: 177em) {
+    .carousel-1x1 {
+      padding-top: 172.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 113.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 128.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 101.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 95.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 84.2em;
+    }
+  }
+  @media screen and (max-width: 176em) {
+    .carousel-1x1 {
+      padding-top: 171.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 113.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 127.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 101.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 94.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 83.7em;
+    }
+  }
+  @media screen and (max-width: 175em) {
+    .carousel-1x1 {
+      padding-top: 170.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 112.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 126.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 100.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 94.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 83.2em;
+    }
+  }
+  @media screen and (max-width: 174em) {
+    .carousel-1x1 {
+      padding-top: 169.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 111.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 126.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 100.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 93.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 82.7em;
+    }
+  }
+  @media screen and (max-width: 173em) {
+    .carousel-1x1 {
+      padding-top: 168.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 111.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 125.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 99.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 93.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 82.2em;
+    }
+  }
+  @media screen and (max-width: 172em) {
+    .carousel-1x1 {
+      padding-top: 167.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 110.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 124.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 98.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 92.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 81.7em;
+    }
+  }
+  @media screen and (max-width: 171em) {
+    .carousel-1x1 {
+      padding-top: 166.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 109.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 123.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 98.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 91.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 81.2em;
+    }
+  }
+  @media screen and (max-width: 170em) {
+    .carousel-1x1 {
+      padding-top: 165.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 109.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 123.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 97.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 91.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 80.7em;
+    }
+  }
+  @media screen and (max-width: 169em) {
+    .carousel-1x1 {
+      padding-top: 164.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 108.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 122.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 97.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 90.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 80.2em;
+    }
+  }
+  @media screen and (max-width: 168em) {
+    .carousel-1x1 {
+      padding-top: 163.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 107.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 121.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 96.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 90.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 79.7em;
+    }
+  }
+  @media screen and (max-width: 167em) {
+    .carousel-1x1 {
+      padding-top: 162.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 107.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 120.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 95.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 89.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 79.2em;
+    }
+  }
+  @media screen and (max-width: 166em) {
+    .carousel-1x1 {
+      padding-top: 161.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 106.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 120.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 95.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 89.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 78.7em;
+    }
+  }
+  @media screen and (max-width: 165em) {
+    .carousel-1x1 {
+      padding-top: 160.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 105.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 119.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 94.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 88.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 78.2em;
+    }
+  }
+  @media screen and (max-width: 164em) {
+    .carousel-1x1 {
+      padding-top: 159.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 105.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 118.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 94.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 87.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 77.7em;
+    }
+  }
+  @media screen and (max-width: 163em) {
+    .carousel-1x1 {
+      padding-top: 158.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 104.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 117.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 93.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 87.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 77.2em;
+    }
+  }
+  @media screen and (max-width: 162em) {
+    .carousel-1x1 {
+      padding-top: 157.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 103.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 117.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 92.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 86.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 76.7em;
+    }
+  }
+  @media screen and (max-width: 161em) {
+    .carousel-1x1 {
+      padding-top: 156.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 103.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 116.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 92.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 86.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 76.2em;
+    }
+  }
+  @media screen and (max-width: 160em) {
+    .carousel-1x1 {
+      padding-top: 155.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 102.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 115.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 91.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 85.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 75.7em;
+    }
+  }
+  @media screen and (max-width: 159em) {
+    .carousel-1x1 {
+      padding-top: 154.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 101.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 114.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 91.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 85.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 75.2em;
+    }
+  }
+  @media screen and (max-width: 158em) {
+    .carousel-1x1 {
+      padding-top: 153.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 101.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 114.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 90.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 84.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 74.7em;
+    }
+  }
+  @media screen and (max-width: 157em) {
+    .carousel-1x1 {
+      padding-top: 152.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 100.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 113.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 89.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 84.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 74.2em;
+    }
+  }
+  @media screen and (max-width: 156em) {
+    .carousel-1x1 {
+      padding-top: 151.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 99.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 112.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 89.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 83.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 73.7em;
+    }
+  }
+  @media screen and (max-width: 155em) {
+    .carousel-1x1 {
+      padding-top: 150.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 99.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 111.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 88.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 82.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 73.2em;
+    }
+  }
+  @media screen and (max-width: 154em) {
+    .carousel-1x1 {
+      padding-top: 149.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 98.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 111.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 88.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 82.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 72.7em;
+    }
+  }
+  @media screen and (max-width: 153em) {
+    .carousel-1x1 {
+      padding-top: 148.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 97.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 110.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 87.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 81.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 72.2em;
+    }
+  }
+  @media screen and (max-width: 152em) {
+    .carousel-1x1 {
+      padding-top: 147.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 97.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 109.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 86.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 81.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 71.7em;
+    }
+  }
+  @media screen and (max-width: 151em) {
+    .carousel-1x1 {
+      padding-top: 146.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 96.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 108.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 86.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 80.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 71.2em;
+    }
+  }
+  @media screen and (max-width: 150em) {
+    .carousel-1x1 {
+      padding-top: 145.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 95.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 108.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 85.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 80.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 70.7em;
+    }
+  }
+  @media screen and (max-width: 149em) {
+    .carousel-1x1 {
+      padding-top: 144.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 95.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 107.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 85.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 79.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 70.2em;
+    }
+  }
+  @media screen and (max-width: 148em) {
+    .carousel-1x1 {
+      padding-top: 143.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 94.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 106.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 84.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 78.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 69.7em;
+    }
+  }
+  @media screen and (max-width: 147em) {
+    .carousel-1x1 {
+      padding-top: 142.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 93.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 105.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 83.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 78.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 69.2em;
+    }
+  }
+  @media screen and (max-width: 146em) {
+    .carousel-1x1 {
+      padding-top: 141.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 93.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 105.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 83.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 77.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 68.7em;
+    }
+  }
+  @media screen and (max-width: 145em) {
+    .carousel-1x1 {
+      padding-top: 140.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 92.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 104.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 82.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 77.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 68.2em;
+    }
+  }
+  @media screen and (max-width: 144em) {
+    .carousel-1x1 {
+      padding-top: 139.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 91.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 103.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 82.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 76.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 67.7em;
+    }
+  }
+  @media screen and (max-width: 143em) {
+    .carousel-1x1 {
+      padding-top: 138.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 91.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 102.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 81.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 76.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 67.2em;
+    }
+  }
+  @media screen and (max-width: 142em) {
+    .carousel-1x1 {
+      padding-top: 137.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 90.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 102.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 80.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 75.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 66.7em;
+    }
+  }
+  @media screen and (max-width: 141em) {
+    .carousel-1x1 {
+      padding-top: 136.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 89.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 101.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 80.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 75.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 66.2em;
+    }
+  }
+  @media screen and (max-width: 140em) {
+    .carousel-1x1 {
+      padding-top: 135.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 89.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 100.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 79.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 74.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 65.7em;
+    }
+  }
+  @media screen and (max-width: 139em) {
+    .carousel-1x1 {
+      padding-top: 134.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 88.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 99.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 79.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 73.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 65.2em;
+    }
+  }
+  @media screen and (max-width: 138em) {
+    .carousel-1x1 {
+      padding-top: 133.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 87.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 99.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 78.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 73.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 64.7em;
+    }
+  }
+  @media screen and (max-width: 137em) {
+    .carousel-1x1 {
+      padding-top: 132.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 87.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 98.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 77.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 72.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 64.2em;
+    }
+  }
+  @media screen and (max-width: 136em) {
+    .carousel-1x1 {
+      padding-top: 131.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 86.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 97.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 77.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 72.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 63.7em;
+    }
+  }
+  @media screen and (max-width: 135em) {
+    .carousel-1x1 {
+      padding-top: 130.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 85.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 96.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 76.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 71.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 63.2em;
+    }
+  }
+  @media screen and (max-width: 134em) {
+    .carousel-1x1 {
+      padding-top: 129.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 85.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 96.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 76.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 71.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 62.7em;
+    }
+  }
+  @media screen and (max-width: 133em) {
+    .carousel-1x1 {
+      padding-top: 128.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 84.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 95.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 75.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 70.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 62.2em;
+    }
+  }
+  @media screen and (max-width: 132em) {
+    .carousel-1x1 {
+      padding-top: 127.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 83.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 94.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 74.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 69.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 61.7em;
+    }
+  }
+  @media screen and (max-width: 131em) {
+    .carousel-1x1 {
+      padding-top: 126.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 83.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 93.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 74.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 69.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 61.2em;
+    }
+  }
+  @media screen and (max-width: 130em) {
+    .carousel-1x1 {
+      padding-top: 125.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 82.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 93.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 73.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 68.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 60.7em;
+    }
+  }
+  @media screen and (max-width: 129em) {
+    .carousel-1x1 {
+      padding-top: 124.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 81.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 92.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 73.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 68.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 60.2em;
+    }
+  }
+  @media screen and (max-width: 128em) {
+    .carousel-1x1 {
+      padding-top: 123.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 81.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 91.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 72.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 67.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 59.7em;
+    }
+  }
+  @media screen and (max-width: 127em) {
+    .carousel-1x1 {
+      padding-top: 122.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 80.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 90.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 71.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 67.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 59.2em;
+    }
+  }
+  @media screen and (max-width: 126em) {
+    .carousel-1x1 {
+      padding-top: 121.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 79.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 90.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 71.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 66.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 58.7em;
+    }
+  }
+  @media screen and (max-width: 125em) {
+    .carousel-1x1 {
+      padding-top: 120.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 79.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 89.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 70.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 66.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 58.2em;
+    }
+  }
+  @media screen and (max-width: 124em) {
+    .carousel-1x1 {
+      padding-top: 119.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 78.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 88.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 70.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 65.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 57.7em;
+    }
+  }
+  @media screen and (max-width: 123em) {
+    .carousel-1x1 {
+      padding-top: 118.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 77.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 87.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 69.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 64.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 57.2em;
+    }
+  }
+  @media screen and (max-width: 122em) {
+    .carousel-1x1 {
+      padding-top: 117.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 77.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 87.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 68.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 64.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 56.7em;
+    }
+  }
+  @media screen and (max-width: 121em) {
+    .carousel-1x1 {
+      padding-top: 116.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 76.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 86.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 68.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 63.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 56.2em;
+    }
+  }
+  @media screen and (max-width: 120em) {
+    .carousel-1x1 {
+      padding-top: 115.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 75.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 85.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 67.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 63.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 55.7em;
+    }
+  }
+  @media screen and (max-width: 119em) {
+    .carousel-1x1 {
+      padding-top: 114.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 75.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 84.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 67.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 62.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 55.2em;
+    }
+  }
+  @media screen and (max-width: 118em) {
+    .carousel-1x1 {
+      padding-top: 113.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 74.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 84.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 66.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 62.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 54.7em;
+    }
+  }
+  @media screen and (max-width: 117em) {
+    .carousel-1x1 {
+      padding-top: 112.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 73.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 83.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 65.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 61.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 54.2em;
+    }
+  }
+  @media screen and (max-width: 116em) {
+    .carousel-1x1 {
+      padding-top: 111.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 73.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 82.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 65.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 60.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 53.7em;
+    }
+  }
+  @media screen and (max-width: 115em) {
+    .carousel-1x1 {
+      padding-top: 110.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 72.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 81.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 64.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 60.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 53.2em;
+    }
+  }
+  @media screen and (max-width: 114em) {
+    .carousel-1x1 {
+      padding-top: 109.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 71.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 81.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 64.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 59.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 52.7em;
+    }
+  }
+  @media screen and (max-width: 113em) {
+    .carousel-1x1 {
+      padding-top: 108.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 71.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 80.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 63.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 59.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 52.2em;
+    }
+  }
+  @media screen and (max-width: 112em) {
+    .carousel-1x1 {
+      padding-top: 107.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 70.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 79.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 62.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 58.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 51.7em;
+    }
+  }
+  @media screen and (max-width: 111em) {
+    .carousel-1x1 {
+      padding-top: 106.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 69.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 78.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 62.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 58.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 51.2em;
+    }
+  }
+  @media screen and (max-width: 110em) {
+    .carousel-1x1 {
+      padding-top: 105.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 69.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 78.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 61.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 57.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 50.7em;
+    }
+  }
+  @media screen and (max-width: 109em) {
+    .carousel-1x1 {
+      padding-top: 104.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 68.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 77.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 61.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 57.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 50.2em;
+    }
+  }
+  @media screen and (max-width: 108em) {
+    .carousel-1x1 {
+      padding-top: 103.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 67.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 76.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 60.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 56.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 49.7em;
+    }
+  }
+  @media screen and (max-width: 107em) {
+    .carousel-1x1 {
+      padding-top: 102.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 67.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 75.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 59.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 55.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 49.2em;
+    }
+  }
+  @media screen and (max-width: 106em) {
+    .carousel-1x1 {
+      padding-top: 101.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 66.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 75.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 59.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 55.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 48.7em;
+    }
+  }
+  @media screen and (max-width: 105em) {
+    .carousel-1x1 {
+      padding-top: 100.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 65.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 74.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 58.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 54.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 48.2em;
+    }
+  }
+  @media screen and (max-width: 104em) {
+    .carousel-1x1 {
+      padding-top: 99.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 65.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 73.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 58.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 54.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 47.7em;
+    }
+  }
+  @media screen and (max-width: 103em) {
+    .carousel-1x1 {
+      padding-top: 98.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 64.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 72.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 57.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 53.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 47.2em;
+    }
+  }
+  @media screen and (max-width: 102em) {
+    .carousel-1x1 {
+      padding-top: 97.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 63.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 72.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 56.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 53.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 46.7em;
+    }
+  }
+  @media screen and (max-width: 101em) {
+    .carousel-1x1 {
+      padding-top: 96.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 63.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 71.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 56.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 52.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 46.2em;
+    }
+  }
+  @media screen and (max-width: 100em) {
+    .carousel-1x1 {
+      padding-top: 95.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 62.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 70.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 55.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 51.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 45.7em;
+    }
+  }
+  @media screen and (max-width: 99em) {
+    .carousel-1x1 {
+      padding-top: 94.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 61.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 69.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 55.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 51.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 45.2em;
+    }
+  }
+  @media screen and (max-width: 98em) {
+    .carousel-1x1 {
+      padding-top: 93.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 61.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 69.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 54.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 50.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 44.7em;
+    }
+  }
+  @media screen and (max-width: 97em) {
+    .carousel-1x1 {
+      padding-top: 92.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 60.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 68.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 53.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 50.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 44.2em;
+    }
+  }
+  @media screen and (max-width: 96em) {
+    .carousel-1x1 {
+      padding-top: 91.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 59.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 67.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 53.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 49.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 43.7em;
+    }
+  }
+  @media screen and (max-width: 95em) {
+    .carousel-1x1 {
+      padding-top: 90.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 59.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 66.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 52.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 49.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 43.2em;
+    }
+  }
+  @media screen and (max-width: 94em) {
+    .carousel-1x1 {
+      padding-top: 89.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 58.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 66.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 52.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 48.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 42.7em;
+    }
+  }
+  @media screen and (max-width: 93em) {
+    .carousel-1x1 {
+      padding-top: 88.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 57.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 65.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 51.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 48.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 42.2em;
+    }
+  }
+  @media screen and (max-width: 92em) {
+    .carousel-1x1 {
+      padding-top: 87.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 57.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 64.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 50.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 47.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 41.7em;
+    }
+  }
+  @media screen and (max-width: 91em) {
+    .carousel-1x1 {
+      padding-top: 86.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 56.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 63.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 50.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 46.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 41.2em;
+    }
+  }
+  @media screen and (max-width: 90em) {
+    .carousel-1x1 {
+      padding-top: 85.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 55.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 63.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 49.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 46.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 40.7em;
+    }
+  }
+  @media screen and (max-width: 89em) {
+    .carousel-1x1 {
+      padding-top: 84.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 55.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 62.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 49.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 45.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 40.2em;
+    }
+  }
+  @media screen and (max-width: 88em) {
+    .carousel-1x1 {
+      padding-top: 83.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 54.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 61.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 48.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 45.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 39.7em;
+    }
+  }
+  @media screen and (max-width: 87em) {
+    .carousel-1x1 {
+      padding-top: 82.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 53.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 60.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 47.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 44.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 39.2em;
+    }
+  }
+  @media screen and (max-width: 86em) {
+    .carousel-1x1 {
+      padding-top: 81.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 53.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 60.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 47.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 44.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 38.7em;
+    }
+  }
+  @media screen and (max-width: 85em) {
+    .carousel-1x1 {
+      padding-top: 80.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 52.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 59.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 46.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 43.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 38.2em;
+    }
+  }
+  @media screen and (max-width: 84em) {
+    .carousel-1x1 {
+      padding-top: 79.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 51.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 58.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 46.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 42.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 37.7em;
+    }
+  }
+  @media screen and (max-width: 83em) {
+    .carousel-1x1 {
+      padding-top: 78.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 51.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 57.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 45.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 42.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 37.2em;
+    }
+  }
+  @media screen and (max-width: 82em) {
+    .carousel-1x1 {
+      padding-top: 77.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 50.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 57.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 44.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 41.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 36.7em;
+    }
+  }
+  @media screen and (max-width: 81em) {
+    .carousel-1x1 {
+      padding-top: 76.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 49.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 56.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 44.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 41.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 36.2em;
+    }
+  }
+  @media screen and (max-width: 80em) {
+    .carousel-1x1 {
+      padding-top: 75.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 49.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 55.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 43.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 40.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 35.7em;
+    }
+  }
+  @media screen and (max-width: 79em) {
+    .carousel-1x1 {
+      padding-top: 74.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 48.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 54.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 43.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 40.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 35.2em;
+    }
+  }
+  @media screen and (max-width: 78em) {
+    .carousel-1x1 {
+      padding-top: 73.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 47.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 54.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 42.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 39.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 34.7em;
+    }
+  }
+  @media screen and (max-width: 77em) {
+    .carousel-1x1 {
+      padding-top: 72.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 47.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 53.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 41.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 39.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 34.2em;
+    }
+  }
+  @media screen and (max-width: 76em) {
+    .carousel-1x1 {
+      padding-top: 71.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 46.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 52.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 41.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 38.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 33.7em;
+    }
+  }
+  @media screen and (max-width: 75em) {
+    .carousel-1x1 {
+      padding-top: 70.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 45.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 51.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 40.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 37.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 33.2em;
+    }
+  }
+  @media screen and (max-width: 74em) {
+    .carousel-1x1 {
+      padding-top: 69.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 45.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 51.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 40.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 37.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 32.7em;
+    }
+  }
+  @media screen and (max-width: 73em) {
+    .carousel-1x1 {
+      padding-top: 68.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 44.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 50.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 39.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 36.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 32.2em;
+    }
+  }
+  @media screen and (max-width: 72em) {
+    .carousel-1x1 {
+      padding-top: 67.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 43.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 49.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 38.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 36.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 31.7em;
+    }
+  }
+  @media screen and (max-width: 71em) {
+    .carousel-1x1 {
+      padding-top: 66.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 43.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 48.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 38.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 35.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 31.2em;
+    }
+  }
+  @media screen and (max-width: 70em) {
+    .carousel-1x1 {
+      padding-top: 65.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 42.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 48.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 37.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 35.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 30.7em;
+    }
+  }
+  @media screen and (max-width: 69em) {
+    .carousel-1x1 {
+      padding-top: 64.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 41.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 47.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 37.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 34.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 30.2em;
+    }
+  }
+  @media screen and (max-width: 68em) {
+    .carousel-1x1 {
+      padding-top: 63.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 41.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 46.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 36.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 33.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 29.7em;
+    }
+  }
+  @media screen and (max-width: 67em) {
+    .carousel-1x1 {
+      padding-top: 62.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 40.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 45.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 35.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 33.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 29.2em;
+    }
+  }
+  @media screen and (max-width: 66em) {
+    .carousel-1x1 {
+      padding-top: 61.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 39.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 45.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 35.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 32.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 28.7em;
+    }
+  }
+  @media screen and (max-width: 65em) {
+    .carousel-1x1 {
+      padding-top: 60.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 39.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 44.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 34.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 32.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 28.2em;
+    }
+  }
+  @media screen and (max-width: 64em) {
+    .carousel-1x1 {
+      padding-top: 59.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 38.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 43.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 34.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 31.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 27.7em;
+    }
+  }
+  @media screen and (max-width: 63em) {
+    .carousel-1x1 {
+      padding-top: 58.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 37.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 42.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 33.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 31.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 27.2em;
+    }
+  }
+  @media screen and (max-width: 62em) {
+    .carousel-1x1 {
+      padding-top: 57.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 37.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 42.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 32.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 30.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 26.7em;
+    }
+  }
+  @media screen and (max-width: 61em) {
+    .carousel-1x1 {
+      padding-top: 56.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 36.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 41.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 32.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 30.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 26.2em;
+    }
+  }
+  @media screen and (max-width: 60em) {
+    .carousel-1x1 {
+      padding-top: 55.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 35.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 40.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 31.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 29.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 25.7em;
+    }
+  }
+  @media screen and (max-width: 59em) {
+    .carousel-1x1 {
+      padding-top: 54.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 35.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 39.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 31.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 28.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 25.2em;
+    }
+  }
+  @media screen and (max-width: 58em) {
+    .carousel-1x1 {
+      padding-top: 53.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 34.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 39.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 30.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 28.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 24.7em;
+    }
+  }
+  @media screen and (max-width: 57em) {
+    .carousel-1x1 {
+      padding-top: 52.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 33.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 38.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 29.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 27.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 24.2em;
+    }
+  }
+  @media screen and (max-width: 56em) {
+    .carousel-1x1 {
+      padding-top: 51.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 33.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 37.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 29.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 27.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 23.7em;
+    }
+  }
+  @media screen and (max-width: 55em) {
+    .carousel-1x1 {
+      padding-top: 50.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 32.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 36.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 28.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 26.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 23.2em;
+    }
+  }
+  @media screen and (max-width: 54em) {
+    .carousel-1x1 {
+      padding-top: 49.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 31.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 36.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 28.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 26.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 22.7em;
+    }
+  }
+  @media screen and (max-width: 53em) {
+    .carousel-1x1 {
+      padding-top: 48.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 31.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 35.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 27.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 25.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 22.2em;
+    }
+  }
+  @media screen and (max-width: 52em) {
+    .carousel-1x1 {
+      padding-top: 47.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 30.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 34.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 26.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 24.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 21.7em;
+    }
+  }
+  @media screen and (max-width: 51em) {
+    .carousel-1x1 {
+      padding-top: 46.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 29.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 33.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 26.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 24.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 21.2em;
+    }
+  }
+  @media screen and (max-width: 50em) {
+    .carousel-1x1 {
+      padding-top: 45.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 29.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 33.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 25.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 23.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 20.7em;
+    }
+  }
+  @media screen and (max-width: 49em) {
+    .carousel-1x1 {
+      padding-top: 44.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 28.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 32.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 25.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 23.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 20.2em;
+    }
+  }
+  @media screen and (max-width: 48em) {
+    .carousel-1x1 {
+      padding-top: 43.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 27.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 31.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 24.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 22.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 19.7em;
+    }
+  }
+  @media screen and (max-width: 47em) {
+    .carousel-1x1 {
+      padding-top: 42.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 27.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 30.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 23.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 22.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 19.2em;
+    }
+  }
+  @media screen and (max-width: 46em) {
+    .carousel-1x1 {
+      padding-top: 41.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 26.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 30.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 23.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 21.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 18.7em;
+    }
+  }
+  @media screen and (max-width: 45em) {
+    .carousel-1x1 {
+      padding-top: 40.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 25.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 29.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 22.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 21.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 18.2em;
+    }
+  }
+  @media screen and (max-width: 44em) {
+    .carousel-1x1 {
+      padding-top: 39.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 25.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 28.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 22.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 20.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 17.7em;
+    }
+  }
+  @media screen and (max-width: 43em) {
+    .carousel-1x1 {
+      padding-top: 38.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 24.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 27.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 21.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 19.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 17.2em;
+    }
+  }
+  @media screen and (max-width: 42em) {
+    .carousel-1x1 {
+      padding-top: 37.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 23.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 27.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 20.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 19.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 16.7em;
+    }
+  }
+  @media screen and (max-width: 41em) {
+    .carousel-1x1 {
+      padding-top: 36.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 23.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 26.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 20.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 18.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 16.2em;
+    }
+  }
+  @media screen and (max-width: 40em) {
+    .carousel-1x1 {
+      padding-top: 35.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 22.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 25.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 19.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 18.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 15.7em;
+    }
+  }
+  @media screen and (max-width: 39em) {
+    .carousel-1x1 {
+      padding-top: 34.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 21.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 24.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 19.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 17.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 15.2em;
+    }
+  }
+  @media screen and (max-width: 38em) {
+    .carousel-1x1 {
+      padding-top: 33.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 21.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 24.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 18.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 17.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 14.7em;
+    }
+  }
+  @media screen and (max-width: 37em) {
+    .carousel-1x1 {
+      padding-top: 32.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 20.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 23.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 17.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 16.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 14.2em;
+    }
+  }
+  @media screen and (max-width: 36em) {
+    .carousel-1x1 {
+      padding-top: 31.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 19.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 22.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 17.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 15.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 13.7em;
+    }
+  }
+  @media screen and (max-width: 35em) {
+    .carousel-1x1 {
+      padding-top: 30.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 19.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 21.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 16.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 15.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 13.2em;
+    }
+  }
+  @media screen and (max-width: 34em) {
+    .carousel-1x1 {
+      padding-top: 29.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 18.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 21.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 16.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 14.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 12.7em;
+    }
+  }
+  @media screen and (max-width: 33em) {
+    .carousel-1x1 {
+      padding-top: 28.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 17.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 20.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 15.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 14.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 12.2em;
+    }
+  }
+  @media screen and (max-width: 32em) {
+    .carousel-1x1 {
+      padding-top: 27.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 17.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 19.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 14.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 13.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 11.7em;
+    }
+  }
+  @media screen and (max-width: 31em) {
+    .carousel-1x1 {
+      padding-top: 26.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 16.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 18.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 14.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 13.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 11.2em;
+    }
+  }
+  @media screen and (max-width: 30em) {
+    .carousel-1x1 {
+      padding-top: 25.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 15.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 18.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 13.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 12.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 10.7em;
+    }
+  }
+  @media screen and (max-width: 29em) {
+    .carousel-1x1 {
+      padding-top: 24.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 15.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 17.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 13.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 12.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 10.2em;
+    }
+  }
+  @media screen and (max-width: 28em) {
+    .carousel-1x1 {
+      padding-top: 23.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 14.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 16.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 12.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 11.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 9.7em;
+    }
+  }
+  @media screen and (max-width: 27em) {
+    .carousel-1x1 {
+      padding-top: 22.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 13.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 15.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 11.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 10.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 9.2em;
+    }
+  }
+  @media screen and (max-width: 26em) {
+    .carousel-1x1 {
+      padding-top: 21.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 13.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 15.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 11.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 10.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 8.7em;
+    }
+  }
+  @media screen and (max-width: 25em) {
+    .carousel-1x1 {
+      padding-top: 20.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 12.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 14.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 10.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 9.7625em;
+    }
+    .carousel-2x1 {
+      padding-top: 8.2em;
+    }
+  }
+  @media screen and (max-width: 24em) {
+    .carousel-1x1 {
+      padding-top: 19.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 11.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 13.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 10.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 9.2em;
+    }
+    .carousel-2x1 {
+      padding-top: 7.7em;
+    }
+  }
+  @media screen and (max-width: 23em) {
+    .carousel-1x1 {
+      padding-top: 18.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 11.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 12.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 9.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 8.6375em;
+    }
+    .carousel-2x1 {
+      padding-top: 7.2em;
+    }
+  }
+  @media screen and (max-width: 22em) {
+    .carousel-1x1 {
+      padding-top: 17.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 10.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 12.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 8.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 8.075em;
+    }
+    .carousel-2x1 {
+      padding-top: 6.7em;
+    }
+  }
+  @media screen and (max-width: 21em) {
+    .carousel-1x1 {
+      padding-top: 16.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 9.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 11.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 8.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 7.5125em;
+    }
+    .carousel-2x1 {
+      padding-top: 6.2em;
+    }
+  }
+  @media screen and (max-width: 20em) {
+    .carousel-1x1 {
+      padding-top: 15.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 9.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 10.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 7.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 6.95em;
+    }
+    .carousel-2x1 {
+      padding-top: 5.7em;
+    }
+  }
+  @media screen and (max-width: 19em) {
+    .carousel-1x1 {
+      padding-top: 14.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 8.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 9.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 7.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 6.3875em;
+    }
+    .carousel-2x1 {
+      padding-top: 5.2em;
+    }
+  }
+  @media screen and (max-width: 18em) {
+    .carousel-1x1 {
+      padding-top: 13.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 7.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 9.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 6.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 5.825em;
+    }
+    .carousel-2x1 {
+      padding-top: 4.7em;
+    }
+  }
+  @media screen and (max-width: 17em) {
+    .carousel-1x1 {
+      padding-top: 12.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 7.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 8.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 5.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 5.2625em;
+    }
+    .carousel-2x1 {
+      padding-top: 4.2em;
+    }
+  }
+  @media screen and (max-width: 16em) {
+    .carousel-1x1 {
+      padding-top: 11.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 6.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 7.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 5.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 4.7em;
+    }
+    .carousel-2x1 {
+      padding-top: 3.7em;
+    }
+  }
+  @media screen and (max-width: 15em) {
+    .carousel-1x1 {
+      padding-top: 10.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 5.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 6.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 4.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 4.1375em;
+    }
+    .carousel-2x1 {
+      padding-top: 3.2em;
+    }
+  }
+  @media screen and (max-width: 14em) {
+    .carousel-1x1 {
+      padding-top: 9.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 5.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 6.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 4.1em;
+    }
+    .carousel-16x9 {
+      padding-top: 3.575em;
+    }
+    .carousel-2x1 {
+      padding-top: 2.7em;
+    }
+  }
+  @media screen and (max-width: 13em) {
+    .carousel-1x1 {
+      padding-top: 8.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 4.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 5.45em;
+    }
+    .carousel-5x3 {
+      padding-top: 3.5em;
+    }
+    .carousel-16x9 {
+      padding-top: 3.0125em;
+    }
+    .carousel-2x1 {
+      padding-top: 2.2em;
+    }
+  }
+  @media screen and (max-width: 12em) {
+    .carousel-1x1 {
+      padding-top: 7.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 3.7em;
+    }
+    .carousel-4x3 {
+      padding-top: 4.7em;
+    }
+    .carousel-5x3 {
+      padding-top: 2.9em;
+    }
+    .carousel-16x9 {
+      padding-top: 2.45em;
+    }
+    .carousel-2x1 {
+      padding-top: 1.7em;
+    }
+  }
+  @media screen and (max-width: 11em) {
+    .carousel-1x1 {
+      padding-top: 6.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 3.0333333333em;
+    }
+    .carousel-4x3 {
+      padding-top: 3.95em;
+    }
+    .carousel-5x3 {
+      padding-top: 2.3em;
+    }
+    .carousel-16x9 {
+      padding-top: 1.8875em;
+    }
+    .carousel-2x1 {
+      padding-top: 1.2em;
+    }
+  }
+  @media screen and (max-width: 10em) {
+    .carousel-1x1 {
+      padding-top: 5.7em;
+    }
+    .carousel-3x2 {
+      padding-top: 2.3666666667em;
+    }
+    .carousel-4x3 {
+      padding-top: 3.2em;
+    }
+    .carousel-5x3 {
+      padding-top: 1.7em;
+    }
+    .carousel-16x9 {
+      padding-top: 1.325em;
+    }
+    .carousel-2x1 {
+      padding-top: 0.7em;
+    }
+  }
+  .carousel-toggle__wrap {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.4em 0.5em 0.25em;
+    display: inline;
+    border-radius: 0.2em;
+  }
+  .carousel-toggle__wrap.manual-play .playPause {
+    display: none;
+  }
+  .carousel-toggle__wrap.auto-play .playPause {
+    display: inline;
+  }
+  .carousel-block {
+    display: block;
+    padding: 1.5em 1em 1em;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    transition: opacity 0.75s ease-in;
+    overflow: hidden;
+  }
+  .carousel-block img {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    z-index: -1;
+    width: 100%;
+  }
+  .carousel-block__sub {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.75em 1em;
+    position: absolute;
+    bottom: -10em;
+    left: 1em;
+    color: #fff;
+    transition: bottom 0.5s ease-out 0.3s;
+    text-align: left;
+  }
+  .carousel-block__sub a {
+    color: #ff0;
+  }
+  .carousel-block__sub h1 {
+    margin: 0 0 0.5em;
+  }
+  .carousel-block__sub p {
+    margin: 0.5em 0 0;
+  }
+  
+  input.carousel-toggle + .carousel-block {
+    z-index: -100;
+    opacity: 0;
+  }
+  input.carousel-toggle:checked + .carousel-block {
+    z-index: -1;
+    opacity: 1;
+  }
+  input.carousel-toggle:checked + .carousel-block .carousel-block__sub {
+    bottom: 1em;
+  }
+  
+  .previous-next {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    width: 2.25em;
+    font-weight: bold;
+    padding-top: 20%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .previous-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 1;
+    z-index: 1000;
+  }
+  .previous-next .label-str {
+    display: block;
+    text-indent: -1000em;
+  }
+  .previous-next__previous {
+    left: 0%;
+  }
+  .previous-next__next {
+    right: 0%;
+  }
+  
