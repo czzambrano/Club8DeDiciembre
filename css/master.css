@@ -11,6 +11,7 @@ ul{
     list-style-type: none;    
 }
 
+
 /*Selector Clase*/
 .titulo{
     color: white;
@@ -50,6 +51,7 @@ ul{
 }
 .parrafo{
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.64);
+    color:rgb(0, 0, 255);
     font-size: 20px;
     font-weight: 200;
     line-height: 1.5;
@@ -58,7 +60,7 @@ ul{
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
     /*font-family: fantasy 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
-    background-color: rgba(171, 118, 251, 0.732);
+    background-color: rgba(216, 214, 219, 0.732);
     padding:10px;
     text-align: justify;
     margin-top: -15px;
@@ -210,6 +212,15 @@ justify-content: center;*/
 #slide-6-2:checked ~ .control-6-2 {
     display: block;
 }
+/*PARA EL TERCER  CORROUSEL*/
+#slide-1-3:checked ~ .control-1-3,
+#slide-2-3:checked ~ .control-2-3,
+#slide-3-3:checked ~ .control-3-3,
+#slide-4-3:checked ~ .control-4-3,
+#slide-5-3:checked ~ .control-5-3,
+#slide-6-3:checked ~ .control-6-3 {
+    display: block;
+}
 .slide-indicador {
     list-style: none;
     margin: 0;
@@ -260,7 +271,22 @@ justify-content: center;*/
      li:nth-child(4) .slide-circulo,
 #slide-5-2:checked ~ .control-5-2 ~ .slide-indicador 
       li:nth-child(5) .slide-circulo,
-#slide-6-2:checked ~ .control-6-1 ~ .slide-indicador 
+#slide-6-2:checked ~ .control-6-2 ~ .slide-indicador 
+      li:nth-child(6) .slide-circulo{
+    color: #428bca;
+}
+/*CONTROL PARA EL TERCER CARROUSEL*/
+#slide-1-3:checked ~ .control-1-3 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2-3:checked ~ .control-2-3 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3-3:checked ~ .control-3-3 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo 
+#slide-4-3:checked ~ .control-4-3 ~ .slide-indicador 
+     li:nth-child(4) .slide-circulo,
+#slide-5-3:checked ~ .control-5-3 ~ .slide-indicador 
+      li:nth-child(5) .slide-circulo,
+#slide-6-3:checked ~ .control-6-3 ~ .slide-indicador 
       li:nth-child(6) .slide-circulo{
     color: #428bca;
 }
@@ -283,31 +309,86 @@ main {
     grid-template-columns: 200px 200px 200px 200px 200px 200px;
     grid-template-rows: 150px 150px;
   }
-  .carousel-control-prev{
-    background: rgba(27, 27, 27, 0.5);
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    /*display: none;*/
-    font-size:20px;
-    height: 40px;
-    line-height: 70px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+  
+/*CARROUSEL 3D*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
     text-align: center;
-    width: 40px;
-    z-index: 10;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 80px;
+    color: aqua;
+    text-shadow: 0px 0px 6px black;
+
 }
-.carousel slide{
+.content-all{  
+    width: 210px;
+    margin: auto;
+    perspective: 900px;
+    position: relative;
+    margin-top: 0px;
+    animation-play-state: paused;
+    cursor: pointer;  
+}
 
-
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 40s infinite linear;
+    transform-style: preserve-3d;
+    
+    
+}
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer; 
+    
+    
+    }
+.content-carrousel figure{  
+width: 100%;
+height: 200px;
 overflow: hidden;
-    width: 99%;
-    height: calc( 650px + -6rem);
-    margin-left: 0.5%; 
- 
+position: absolute;
+box-shadow: 0px 0px 20px 0px black;
+transition: all 300ms;
 }
+.content-carrousel figure :hover{
+    box-shadow: 0px 0px 0px 0px black;
+}
+.content-carrousel img :hover{
+    transform: scale(1,1);
+    transition: all 300ms;
+    
+}
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+
+.content-carrousel img{  
+    width: 100%;
+    transition: all 300ms;
+    transform: scale(1.2);
+    transition: all 300ms;       
+}
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
