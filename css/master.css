@@ -161,7 +161,7 @@ a:hover {
 }
 .row {
   /*overflow: scroll;*/
-  /*width: 100%;*/
+  width: 100%;
 }
 .row__inner {
   overflow: scroll;
