@@ -93,8 +93,7 @@ a:hover{
 }*/
 /*==== Desde aquí inicio la disposicón del CSS valiendonos de Flex-box ====================================================*/
 .encabezado{
-    width: 95%;
-    margin-left: 0%;
+    width: 100%;
    padding-top: 1%;
    padding: 1%;
     /*display: grid;
@@ -149,7 +148,7 @@ a:hover,
 a:active,
 a:visited {
   transition: color 150ms;
-  color:rgb(255, 255, 255);
+  color:rgb(0, 0, 255);
   text-decoration: none;
 }
 a:hover {
