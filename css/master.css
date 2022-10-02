@@ -750,8 +750,8 @@ body {
 .intro .intro__title {
   font-weight: 200;
   font-size: 32px;
-  
-.intro .intro__body {
+}
+.intro .intro__body{
   text-align: justify;
   color: rgb(0, 255, 255);
   font-size: 22px;
