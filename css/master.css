@@ -117,10 +117,17 @@ justify-content: center;*/
      
      
 }
-.col-3{
+.col-3 h6{
     box-shadow: 10px 20px 20px rgba(255, 255, 255, 0.80); 
-    color: rgb(255, 255, 255);
-   
+    color: rgb(0, 0, 255);
+    font-size: 12px;
+    background-color: #fff;  
+}
+.col-3 h2{
+  box-shadow: 10px 20px 20px rgba(255, 255, 255, 0.80); 
+  color: rgb(0, 0, 255);
+  font-size: 18px;
+  background-color: #fff;  
 }
 .logo1{
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.64);
