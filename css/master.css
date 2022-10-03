@@ -125,7 +125,7 @@ justify-content: center;*/
 }
 .col-3 h2{
   box-shadow: 10px 20px 20px rgba(255, 255, 255, 0.80); 
-  color: rgb(0, 0, 255);
+  color: rgb(255, 0, 0);
   font-size: 9px;
   background-color: #fff;  
 }
