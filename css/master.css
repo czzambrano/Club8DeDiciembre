@@ -1,6 +1,8 @@
 /*Aplicando CSS de forma Externa*/
 /*----------------------------------------*/
-
+body{
+  @import url("https://fonts.googleapis.com/css?family=Roboto:900");
+}
 img{
     max-width: 100%;
     max-height: 100%;
@@ -24,9 +26,12 @@ ul{
     padding: 0px;
     margin-top:60px; 
     /*margin-left:5%;*/
-     
-    
 }
+ .nosotros p{
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.64);
+ }    
+    
+
 .subtitulos{
     /*box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.80) ;*/
     width: 100%;
@@ -47,23 +52,23 @@ ul{
     margin-right: 2%;*/
     
 }
-P {
+/*P {
     box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.64);
     color:rgb(255, 255, 255);
     font-size: 20px;
     font-weight: 200;
-    line-height: 1.5;
+    line-height: 1.5;*/
     /*font-family: Arial, Helvetica, sans-serif;*/
              /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
     /*font-family: fantasy 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
     /*background-color: rgba(216, 214, 219, 0.732);*/
-    padding:10px;
+    /*padding:10px;
     text-align: justify;
     margin-top: -10px;
     margin-left: 0%;
-    margin-right: 0%;   
+    margin-right: 0%;*/   
 }
 
 a{
@@ -73,10 +78,6 @@ a{
     text-decoration: none;
 }
 
-a:hover{
-    color: tomato;
-    text-decoration: underline;
-}
 
 /*.boton{
     font-family: Arial, Helvetica, sans-serif;
@@ -118,13 +119,13 @@ justify-content: center;*/
      
 }
 .col-3 H6{
-    box-shadow: 10px 20px 20px rgba(255, 255, 255, 0.80); 
+    /*box-shadow: 10px 20px 20px rgba(255, 255, 255, 0.80);*/ 
     color: rgb(255, 255, 255);
     font-size: 8px;
     font-weight: bold;
 }
 .col-3 h2{
-  box-shadow: 10px 20px 20px rgba(255, 255, 255, 0.80); 
+  /*box-shadow: 10px 20px 20px rgba(255, 255, 255, 0.80); */
   color: rgb(255, 0, 0);
   font-size: 6px;
   font-weight: bold;
@@ -152,7 +153,6 @@ p {
   margin: auto;
 }*/
 a:link,
-a:hover,
 a:active,
 a:visited {
   transition: color 150ms;
@@ -160,7 +160,9 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color:rgb(255, 255, 255);
+  color: tomato;
+  transition: color 150ms;
+  /*color:rgb(255, 255, 255);*/
   text-decoration: underline;
 }
 .contain {
@@ -326,7 +328,7 @@ a:hover {
   /*=================================================CARROUSEL2===================================================
   =========================================================================================================================
   ============================================================================================================================*/
-  @import url("https://fonts.googleapis.com/css?family=Roboto:900");
+  
 /**
   * style variables
 */
