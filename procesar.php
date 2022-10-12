@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
 $mensaje = $_POST['mensaje'];
@@ -18,5 +19,5 @@ $asunto = 'asunto del mail recibido';
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
 header("Location: index.html");
-
+echo"GRACIAS POR SU MENSAJE"
 ?>
