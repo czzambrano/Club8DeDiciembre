@@ -40,7 +40,7 @@ body{
 }
 .nosotros p{box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.64);}  
 .subtitulos{
-  /*width: 100%;*/
+  width: 100%;
   font-family: 'Bebas Neue', cursive;
   font-size: 2rem;   /*1rem = 16px   2rem  = 2 * 16px*/
   text-align: center;
