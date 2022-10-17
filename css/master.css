@@ -4,7 +4,7 @@ body{
   @import url("https://fonts.googleapis.com/css?family=Roboto:900");
     background-color: #111;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
+    /*text-align: center;*/
     color: rgb(251, 249, 249);
 }
 /*img{
@@ -271,6 +271,9 @@ a:hover {
 /**
   * Control & indicator mixin
 */
+.mantenimiento{
+  text-align: center;
+}
 .carousel {
   height: 300px;
   width: 400px;
