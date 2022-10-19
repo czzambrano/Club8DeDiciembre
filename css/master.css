@@ -565,8 +565,7 @@ h3 {
   /*font-family: 'Bebas Neue', cursive;*/
   @import url("https://fonts.googleapis.com/css?family=Roboto:900");
 }
-h1,
-p {
+.animacion h1,p {
   text-align: center;
 }
 /*p {
@@ -590,13 +589,13 @@ a:hover {
 .contain {
   width: 100%;
 }
-.row {
+.animacion .row {
   /*overflow: scroll;*/
-  width: 100%;
+  width: 106%;
 }
 .row__inner {
-  overflow: scroll;
-  width: 100%;
+  /*overflow: scroll;*/
+  width: 150%;
   transition: 450ms transform;
   font-size: 0;
   white-space: nowrap;
