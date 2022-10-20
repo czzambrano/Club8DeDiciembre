@@ -106,7 +106,7 @@ a:hover {
 }
 .row {
   /*overflow: scroll;*/
-  width: 100%;
+  width: 102%;
 }
 .row__inner {
   overflow: scroll;
@@ -598,7 +598,7 @@ a:hover {
   width: 150%;
   transition: 450ms transform;
   font-size: 0;
-  white-space: normal;
+  white-space: nowrap;
   margin: 70.3125px 70;
   padding-bottom: 20px;
   
