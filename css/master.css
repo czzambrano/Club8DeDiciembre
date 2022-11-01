@@ -73,6 +73,7 @@ ul{
 ===========================================================================================================================*/
 * {
   box-sizing: border-box;
+
   
 }
 .animaciones a{
@@ -107,6 +108,7 @@ a:hover {
 .row {
   /*overflow: scroll;*/
   width: 102%;
+  padding-left: 2%;
 }
 .row__inner {
   overflow: scroll;
@@ -121,8 +123,8 @@ a:hover {
 .tile {
   position: relative;
   display: inline-block;
-  width: 250px;
-  height: 140.625px;
+  width: 10px;
+  height: 10px;
   margin-right: 10px;
   font-size: 20px;
   cursor: pointer;
