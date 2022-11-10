@@ -95,13 +95,14 @@ ul{
 /**
   * Control & indicator mixin
 */
+
 .carousel {
   height: 300px;
   width: 400px;
   overflow: hidden;
   text-align: center;
   position: relative;
-  padding: 0;
+  padding: 0 20px;
   list-style: none;
 /**
   * Where the magic happens
