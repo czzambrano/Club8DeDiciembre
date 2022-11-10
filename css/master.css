@@ -56,7 +56,9 @@ body{
   color: rgb(255, 255, 255);
   margin-left: 0%; 
 }
-
+.subtitulos3{
+  text-align: left;
+}
 
 .col-3 img{width: 100%;}
 .col-3 h2{
@@ -501,6 +503,7 @@ h3 {
     object-fit: cover;
   }
   .carousel__slid figcaption {
+    color: rgb(255, 255, 255);
     align-self: flex-end;
     padding: 20px 20px 0 20px;
     flex: 0 0 auto;
