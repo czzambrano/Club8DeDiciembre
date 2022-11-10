@@ -30,6 +30,10 @@ body{
   width: 100%;
   padding-top: 1%;
 }
+.logoalquiler img{
+  width: 100%;
+  padding-top: 1%;
+}
 .subtitulo{
   /*box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.80);*/
   color: rgb(255, 255, 255);
