@@ -102,7 +102,7 @@ ul{
   overflow: hidden;
   text-align: center;
   position: relative;
-  padding: 0 20px;
+  padding: 0;
   list-style: none;
 /**
   * Where the magic happens
@@ -428,6 +428,7 @@ h3 {
   }
   .carousel4 > input:nth-of-type(1):checked ~ .carousel__slids .carousel__slid:first-of-type {
     margin-left: 0%;
+
   }
   .carousel4 > input:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) {
     box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
