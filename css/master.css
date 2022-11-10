@@ -315,11 +315,9 @@ body {
   text-align: center;
   color: #fff;
 }
-.carousel-container {
-  display: inline-flex; 
-  padding-left: 0%;
-  padding-right: 20%;
-}
+/*.carousel-container {
+  display: inline-block;
+}*/
 .carousel-container img {
   width: 100%;
   /*width: 100%;*/
