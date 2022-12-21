@@ -575,7 +575,7 @@ h3 {
   
   
   .container7 {
-    max-width: 2000px;
+    max-width: 1044px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -676,7 +676,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
+    width: 150%;
     height: 100%;
   }
   .carousel__slide7 img {
