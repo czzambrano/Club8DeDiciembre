@@ -676,7 +676,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 150%;
+    width: 200%;
     height: 100%;
   }
   .carousel__slide7 img {
@@ -684,13 +684,13 @@ h3 {
     flex: 1 1 auto;
     object-fit: cover;
   }
-  .carousel__slide7 figcaption {
+  /*.carousel__slide7 figcaption {
     align-self: flex-end;
     padding: 20px 20px 0 20px;
     flex: 0 0 auto;
-    width: 25%;
-    min-width: 150px;
-  }
+    width: 5%;
+    min-width: 50px;
+  }*/
   .carousel__slide7 .credit {
     margin-top: 1rem;
     color: rgba(0, 0, 0, 0.5);
