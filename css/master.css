@@ -575,7 +575,7 @@ h3 {
   
   
   .container7 {
-    max-width: 1044px;
+    max-width: 2000px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -816,86 +816,5 @@ h3 {
   /*====================================================================================================
   =========================================================================================================================
   ============================================================================================================================*/
-  /*body {
-    background: #000;
-  }*/
-   .nombre h1 {
-    color: #7cfc00;
-  }
-  label {
-    display: block;
-  }
-  /* start general carousel styles */
-  .carousel9 {
-    height: 392px;
-    margin: 12px;
-  }
-  .carousel9-inner {
-    overflow: visible;
-  }
-  .carousel9 ul {
-    -webkit-transform: translateY(36%);
-    -ms-transform: translateY(36%);
-    transform: translateY(36%);
-    padding-left: 7px;
-  }
-  .carousel9 li {
-    float: left;
-    font-size: 13px;
-    margin: 0 3%;
-    text-align: center;
-    width: 20%;
-    list-style-type: none;
-  }
-  .carousel9 li:first-child {
-    margin-left: 1%;
-  }
-  .carousel9 li:last-child {
-    margin-right: 1%;
-  }
-  .carousel9 li {
-    margin: 0 1.64%;
-    width: 30%;
-  }
-  .carousel9 img {
-    background-color: #fff;
-    border-radius: 3px;
-    padding: 5px;
-    width: 100%;
-  }
-  .carousel9 label {
-    padding: 0;
-    -webkit-transition: all 0.34s linear;
-    transition: all 0.34s linear;
-  }
-  .carousel9 input[type="radio"] {
-    display: none;
-  }
-  .carousel9 input[type="radio"]:checked + label {
-    border-color: transparent;
-    border-radius: 3px;
-    box-shadow: 0 0 20px 0 #7cfc00;
-    cursor: pointer;
-    padding: 0;
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-    -webkit-transition-delay: 0;
-    transition-delay: 0;
-    -webkit-transition: all 0.34s linear;
-    transition: all 0.34s linear;
-    z-index: 2;
-  }
-  .carousel9 li:first-child input[type="radio"]:checked + label {
-    position: relative;
-    -ms-transform: translateX(25%) scale(1.5);
-    -webkit-transform: translateX(25%) scale(1.5);
-    transform: translateX(25%) scale(1.5);
-  }
-  .carousel9 li:last-child input[type="radio"]:checked + label {
-    position: relative;
-    -ms-transform: translateX(-25%) scale(1.5);
-    -webkit-transform: translateX(-25%) scale(1.5);
-    transform: translateX(-25%) scale(1.5);
-  }
+  
   
