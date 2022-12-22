@@ -14,6 +14,7 @@
     ],
     "no-inline-styles": "off",
     "axe/text-alternatives": "off",
-    "axe/structure": "off"
+    "axe/structure": "off",
+    "highest-available-document-mode": "off"
   }
 }
