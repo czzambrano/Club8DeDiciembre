@@ -296,7 +296,7 @@ ul{
     padding: 0;
     position: absolute;
   }
-  .carousel7 > input:nth-of-type(6):checked ~ .carousel__slides6 .carousel__slide7:first-of-type {
+  .carousel7 > input:nth-of-type(6):checked ~ .carousel__slides7 .carousel__slide7:first-of-type {
     margin-left: -500%;
   }
   .carousel7 > input:nth-of-type(5):checked ~ .carousel__slides7 .carousel__slide7:first-of-type {
