@@ -528,13 +528,14 @@ ul{
   * Control & indicator mixin
 */
 .carousel {
-  height: 600px;
-  width: 500px;
+  height: 300px;
+  width: 380px;
   overflow: hidden;
   text-align: center;
   position: relative;
   padding: 0;
   list-style: none;
+  
 /**
   * Where the magic happens
   */
@@ -726,7 +727,7 @@ ul{
   transform: scale(0);
 }
 .carousel__slide {
-  height: 200%;
+  height: 100%;
   position: absolute;
   overflow-y: auto;
   opacity: 0;
@@ -746,7 +747,7 @@ body {
 }
 .carousel-container {
   display: inline-block;
-  padding-left: 1%;
+  padding-left: 0%;
 }
 .my-carousel {
   border-radius: 5px;
